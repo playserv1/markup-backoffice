@@ -1,0 +1,54 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.card {
+  background: get-color($surfaces, secondary-lighter);
+  border: px-to-rem(1) solid get-color($strokes, primary);
+  border-radius: radius(lg-s);
+  padding: px-to-rem(44);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: px-to-rem(23);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    cursor: pointer;
+
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &:before {
+    background: map.get($primitives, card-hover-gradient);
+    content: "";
+    position: absolute;
+    width: px-to-rem(315);
+    height: px-to-rem(315);
+    left: px-to-rem(-138);
+    top: px-to-rem(-80);
+    filter: blur(75px);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    opacity: 0;
+    transition: 0.3s;
+    z-index: -1;
+  }
+}
+
+.card__icon {
+  width: px-to-rem(100);
+  height: px-to-rem(110);
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(8);
+}
+
+.card__description {
+  opacity: 0.6;
+}

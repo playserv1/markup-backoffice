@@ -1,0 +1,137 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.tech {
+  padding-bottom: px-to-rem(40);
+  padding-top: px-to-rem(50);
+  overflow: hidden;
+
+  @include respond(md) {
+    padding-bottom: px-to-rem(114);
+    padding-top: px-to-rem(80);
+  }
+
+  @include respond(lg) {
+    padding-bottom: px-to-rem(21);
+    padding-top: px-to-rem(17);
+  }
+}
+
+.tech__container {
+  justify-items: center;
+  display: grid;
+  justify-content: center;
+  grid-template-areas:
+    'info'
+    'picture'
+    'button';
+
+  @include respond(md) {
+    grid-template-areas:
+    'info'
+    'button'
+    'picture';
+  }
+
+  @include respond(lg) {
+    justify-items: flex-start;
+    gap: px-to-rem(30) px-to-rem(2);
+    grid-template-areas:
+    'info picture'
+    'button picture';
+  }
+}
+
+.tech__info {
+  align-items: center;
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(10);
+  margin-top: auto;
+  max-width: px-to-rem(560);
+  text-align: center;
+
+  @include respond(lg) {
+    align-items: flex-start;
+    text-align: initial;
+  }
+}
+
+.tech__badge {
+  color: get-color($text-colors, primary);
+  letter-spacing: 0;
+}
+
+.tech__title {
+  max-width: px-to-rem(500);
+
+  @include respond(lg) {
+    max-width: initial;
+  }
+}
+
+.tech__description {
+  margin-top: px-to-rem(2);
+
+  @include respond(md) {
+    margin-top: 0;
+  }
+
+  @include respond(lg) {
+    margin-top: px-to-rem(50);
+  }
+}
+
+.tech__btn {
+  height: px-to-rem(52);
+  grid-area: button;
+  margin-bottom: auto;
+  width: 100%;
+  z-index: 1;
+
+  @include respond(md) {
+    margin-top: px-to-rem(30);
+    height: px-to-rem(40);
+    width: initial;
+  }
+
+  @include respond(lg) {
+    margin-top: initial;
+  }
+}
+
+.tech__picture-box {
+  max-width: px-to-rem(469);
+  position: relative;
+  grid-area: picture;
+  margin: px-to-rem(-22) px-to-rem(-20);
+
+  @include respond(md) {
+    margin: px-to-rem(17) 0 0;
+  }
+
+  @include respond(lg) {
+    margin: 0;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: px-to-rem(-130);
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='863' height='766' viewBox='0 0 863 766' fill='none'%3E%3Cg opacity='0.36' filter='url(%23filter0_f_2488_16151)'%3E%3Cg clip-path='url(%23paint0_angular_2488_16151_clip_path)' data-figma-skip-parse='true'%3E%3Cg transform='matrix(-0.293047 0.399555 0.124201 0.013219 345.807 346.445)'%3E%3CforeignObject x='-2167.19' y='-2167.19' width='4334.38' height='4334.38'%3E%3Cdiv xmlns='http://www.w3.org/1999/xhtml' style='background:conic-gradient(from 90deg,rgba(255, 149, 0, 1) 0deg,rgba(175, 82, 222, 1) 60.5769deg,rgba(80, 176, 248, 1) 95.1923deg,rgba(255, 59, 48, 1) 275.192deg,rgba(75, 43, 253, 1) 346.685deg,rgba(255, 149, 0, 1) 360deg);height:100%25;width:100%25;opacity:1'%3E%3C/div%3E%3C/foreignObject%3E%3C/g%3E%3C/g%3E%3Cellipse cx='202.908' cy='189.099' rx='202.908' ry='189.099' transform='matrix(0.690609 0.723229 0.723229 -0.690609 68.9148 330.29)' data-figma-gradient-fill='%7B&quot;type&quot;:&quot;GRADIENT_ANGULAR&quot;,&quot;stops&quot;:%5B%7B&quot;color&quot;:%7B&quot;r&quot;:0.68627452850341797,&quot;g&quot;:0.32156863808631897,&quot;b&quot;:0.87058824300765991,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.16826921701431274%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:0.31372550129890442,&quot;g&quot;:0.69019609689712524,&quot;b&quot;:0.97254902124404907,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.26442307233810425%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:1.0,&quot;g&quot;:0.23137255012989044,&quot;b&quot;:0.18823529779911041,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.76442307233810425%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:0.29411765933036804,&quot;g&quot;:0.16862745583057404,&quot;b&quot;:0.99215686321258545,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.96301478147506714%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:1.0,&quot;g&quot;:0.58431375026702881,&quot;b&quot;:0.0,&quot;a&quot;:1.0%7D,&quot;position&quot;:1.0%7D%5D,&quot;stopsVar&quot;:%5B%7B&quot;color&quot;:%7B&quot;r&quot;:0.68627452850341797,&quot;g&quot;:0.32156863808631897,&quot;b&quot;:0.87058824300765991,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.16826921701431274%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:0.31372550129890442,&quot;g&quot;:0.69019609689712524,&quot;b&quot;:0.97254902124404907,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.26442307233810425%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:1.0,&quot;g&quot;:0.23137255012989044,&quot;b&quot;:0.18823529779911041,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.76442307233810425%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:0.29411765933036804,&quot;g&quot;:0.16862745583057404,&quot;b&quot;:0.99215686321258545,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.96301478147506714%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:1.0,&quot;g&quot;:0.58431375026702881,&quot;b&quot;:0.0,&quot;a&quot;:1.0%7D,&quot;position&quot;:1.0%7D%5D,&quot;transform&quot;:%7B&quot;m00&quot;:-586.09313964843750,&quot;m01&quot;:248.40216064453125,&quot;m02&quot;:514.652343750,&quot;m10&quot;:799.110839843750,&quot;m11&quot;:26.437988281250,&quot;m12&quot;:-66.32897949218750%7D,&quot;opacity&quot;:1.0,&quot;blendMode&quot;:&quot;NORMAL&quot;,&quot;visible&quot;:true%7D'/%3E%3C/g%3E%3Cg opacity='0.57' filter='url(%23filter1_f_2488_16151)'%3E%3Cg clip-path='url(%23paint1_angular_2488_16151_clip_path)' data-figma-skip-parse='true'%3E%3Cg transform='matrix(-0.146413 0.304473 0.0852981 -0.00627156 488.229 273.901)'%3E%3CforeignObject x='-2169.29' y='-2169.29' width='4338.57' height='4338.57'%3E%3Cdiv xmlns='http://www.w3.org/1999/xhtml' style='background:conic-gradient(from 90deg,rgba(255, 149, 0, 1) 0deg,rgba(175, 82, 222, 1) 60.5769deg,rgba(80, 176, 248, 1) 95.1923deg,rgba(255, 59, 48, 1) 275.192deg,rgba(75, 43, 253, 1) 346.685deg,rgba(255, 149, 0, 1) 360deg);height:100%25;width:100%25;opacity:1'%3E%3C/div%3E%3C/foreignObject%3E%3C/g%3E%3C/g%3E%3Cellipse cx='139.391' cy='128.903' rx='139.391' ry='128.903' transform='matrix(0.810833 0.585277 0.585277 -0.810833 299.762 296.837)' data-figma-gradient-fill='%7B&quot;type&quot;:&quot;GRADIENT_ANGULAR&quot;,&quot;stops&quot;:%5B%7B&quot;color&quot;:%7B&quot;r&quot;:0.68627452850341797,&quot;g&quot;:0.32156863808631897,&quot;b&quot;:0.87058824300765991,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.16826921701431274%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:0.31372550129890442,&quot;g&quot;:0.69019609689712524,&quot;b&quot;:0.97254902124404907,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.26442307233810425%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:1.0,&quot;g&quot;:0.23137255012989044,&quot;b&quot;:0.18823529779911041,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.76442307233810425%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:0.29411765933036804,&quot;g&quot;:0.16862745583057404,&quot;b&quot;:0.99215686321258545,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.96301478147506714%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:1.0,&quot;g&quot;:0.58431375026702881,&quot;b&quot;:0.0,&quot;a&quot;:1.0%7D,&quot;position&quot;:1.0%7D%5D,&quot;stopsVar&quot;:%5B%7B&quot;color&quot;:%7B&quot;r&quot;:0.68627452850341797,&quot;g&quot;:0.32156863808631897,&quot;b&quot;:0.87058824300765991,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.16826921701431274%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:0.31372550129890442,&quot;g&quot;:0.69019609689712524,&quot;b&quot;:0.97254902124404907,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.26442307233810425%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:1.0,&quot;g&quot;:0.23137255012989044,&quot;b&quot;:0.18823529779911041,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.76442307233810425%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:0.29411765933036804,&quot;g&quot;:0.16862745583057404,&quot;b&quot;:0.99215686321258545,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.96301478147506714%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:1.0,&quot;g&quot;:0.58431375026702881,&quot;b&quot;:0.0,&quot;a&quot;:1.0%7D,&quot;position&quot;:1.0%7D%5D,&quot;transform&quot;:%7B&quot;m00&quot;:-292.82678222656250,&quot;m01&quot;:170.59617614746094,&quot;m02&quot;:549.34478759765625,&quot;m10&quot;:608.94549560546875,&quot;m11&quot;:-12.543116569519043,&quot;m12&quot;:-24.300216674804688%7D,&quot;opacity&quot;:1.0,&quot;blendMode&quot;:&quot;NORMAL&quot;,&quot;visible&quot;:true%7D'/%3E%3C/g%3E%3Cg opacity='0.44' filter='url(%23filter2_f_2488_16151)'%3E%3Cg clip-path='url(%23paint2_angular_2488_16151_clip_path)' data-figma-skip-parse='true'%3E%3Cg transform='matrix(0.159527 -0.0762418 0.0531926 0.111299 485.421 397.539)'%3E%3CforeignObject x='-1006.65' y='-1006.65' width='2013.3' height='2013.3'%3E%3Cdiv xmlns='http://www.w3.org/1999/xhtml' style='background:conic-gradient(from 90deg,rgba(80, 176, 248, 1) 0deg,rgba(175, 82, 222, 1) 360deg);height:100%25;width:100%25;opacity:1'%3E%3C/div%3E%3C/foreignObject%3E%3C/g%3E%3C/g%3E%3Cellipse cx='485.421' cy='397.539' rx='123.357' ry='176.81' transform='rotate(-115.544 485.421 397.539)' data-figma-gradient-fill='%7B&quot;type&quot;:&quot;GRADIENT_ANGULAR&quot;,&quot;stops&quot;:%5B%7B&quot;color&quot;:%7B&quot;r&quot;:0.31372550129890442,&quot;g&quot;:0.69019609689712524,&quot;b&quot;:0.97254902124404907,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.0%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:0.68627452850341797,&quot;g&quot;:0.32156863808631897,&quot;b&quot;:0.87058824300765991,&quot;a&quot;:1.0%7D,&quot;position&quot;:1.0%7D%5D,&quot;stopsVar&quot;:%5B%7B&quot;color&quot;:%7B&quot;r&quot;:0.31372550129890442,&quot;g&quot;:0.69019609689712524,&quot;b&quot;:0.97254902124404907,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.0%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:0.68627452850341797,&quot;g&quot;:0.32156863808631897,&quot;b&quot;:0.87058824300765991,&quot;a&quot;:1.0%7D,&quot;position&quot;:1.0%7D%5D,&quot;transform&quot;:%7B&quot;m00&quot;:319.05441284179688,&quot;m01&quot;:106.38520812988281,&quot;m02&quot;:272.70147705078125,&quot;m10&quot;:-152.48359680175781,&quot;m11&quot;:222.59883117675781,&quot;m12&quot;:362.48126220703125%7D,&quot;opacity&quot;:1.0,&quot;blendMode&quot;:&quot;NORMAL&quot;,&quot;visible&quot;:true%7D'/%3E%3C/g%3E%3Cg opacity='0.32' filter='url(%23filter3_f_2488_16151)'%3E%3Cg clip-path='url(%23paint3_angular_2488_16151_clip_path)' data-figma-skip-parse='true'%3E%3Cg transform='matrix(0.147703 -0.0611186 0.0471658 0.113984 327.339 403.143)'%3E%3CforeignObject x='-1006.65' y='-1006.65' width='2013.3' height='2013.3'%3E%3Cdiv xmlns='http://www.w3.org/1999/xhtml' style='background:conic-gradient(from 90deg,rgba(80, 176, 248, 1) 0deg,rgba(175, 82, 222, 1) 360deg);height:100%25;width:100%25;opacity:1'%3E%3C/div%3E%3C/foreignObject%3E%3C/g%3E%3C/g%3E%3Cellipse cx='327.339' cy='403.143' rx='123.357' ry='159.849' transform='rotate(-112.479 327.339 403.143)' data-figma-gradient-fill='%7B&quot;type&quot;:&quot;GRADIENT_ANGULAR&quot;,&quot;stops&quot;:%5B%7B&quot;color&quot;:%7B&quot;r&quot;:0.31372550129890442,&quot;g&quot;:0.69019609689712524,&quot;b&quot;:0.97254902124404907,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.0%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:0.68627452850341797,&quot;g&quot;:0.32156863808631897,&quot;b&quot;:0.87058824300765991,&quot;a&quot;:1.0%7D,&quot;position&quot;:1.0%7D%5D,&quot;stopsVar&quot;:%5B%7B&quot;color&quot;:%7B&quot;r&quot;:0.31372550129890442,&quot;g&quot;:0.69019609689712524,&quot;b&quot;:0.97254902124404907,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.0%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:0.68627452850341797,&quot;g&quot;:0.32156863808631897,&quot;b&quot;:0.87058824300765991,&quot;a&quot;:1.0%7D,&quot;position&quot;:1.0%7D%5D,&quot;transform&quot;:%7B&quot;m00&quot;:295.40695190429688,&quot;m01&quot;:94.331657409667969,&quot;m02&quot;:132.46984863281250,&quot;m10&quot;:-122.23725128173828,&quot;m11&quot;:227.96838378906250,&quot;m12&quot;:350.27770996093750%7D,&quot;opacity&quot;:1.0,&quot;blendMode&quot;:&quot;NORMAL&quot;,&quot;visible&quot;:true%7D'/%3E%3C/g%3E%3Cg opacity='0.32' filter='url(%23filter4_f_2488_16151)'%3E%3Cg clip-path='url(%23paint4_angular_2488_16151_clip_path)' data-figma-skip-parse='true'%3E%3Cg transform='matrix(0.147703 -0.0611186 0.0465994 0.112615 508.009 514.367)'%3E%3CforeignObject x='-1006.73' y='-1006.73' width='2013.46' height='2013.46'%3E%3Cdiv xmlns='http://www.w3.org/1999/xhtml' style='background:conic-gradient(from 90deg,rgba(80, 176, 248, 1) 0deg,rgba(175, 82, 222, 1) 360deg);height:100%25;width:100%25;opacity:1'%3E%3C/div%3E%3C/foreignObject%3E%3C/g%3E%3C/g%3E%3Cellipse cx='508.009' cy='514.367' rx='121.876' ry='159.849' transform='rotate(-112.479 508.009 514.367)' data-figma-gradient-fill='%7B&quot;type&quot;:&quot;GRADIENT_ANGULAR&quot;,&quot;stops&quot;:%5B%7B&quot;color&quot;:%7B&quot;r&quot;:0.31372550129890442,&quot;g&quot;:0.69019609689712524,&quot;b&quot;:0.97254902124404907,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.0%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:0.68627452850341797,&quot;g&quot;:0.32156863808631897,&quot;b&quot;:0.87058824300765991,&quot;a&quot;:1.0%7D,&quot;position&quot;:1.0%7D%5D,&quot;stopsVar&quot;:%5B%7B&quot;color&quot;:%7B&quot;r&quot;:0.31372550129890442,&quot;g&quot;:0.69019609689712524,&quot;b&quot;:0.97254902124404907,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.0%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:0.68627452850341797,&quot;g&quot;:0.32156863808631897,&quot;b&quot;:0.87058824300765991,&quot;a&quot;:1.0%7D,&quot;position&quot;:1.0%7D%5D,&quot;transform&quot;:%7B&quot;m00&quot;:295.40695190429688,&quot;m01&quot;:93.19885253906250,&quot;m02&quot;:313.70617675781250,&quot;m10&quot;:-122.23725128173828,&quot;m11&quot;:225.23077392578125,&quot;m12&quot;:462.86981201171875%7D,&quot;opacity&quot;:1.0,&quot;blendMode&quot;:&quot;NORMAL&quot;,&quot;visible&quot;:true%7D'/%3E%3C/g%3E%3Cg opacity='0.32' filter='url(%23filter5_f_2488_16151)'%3E%3Cg clip-path='url(%23paint5_angular_2488_16151_clip_path)' data-figma-skip-parse='true'%3E%3Cg transform='matrix(0.125189 -0.0688188 0.0487861 0.0887472 309.429 517.106)'%3E%3CforeignObject x='-1008.1' y='-1008.1' width='2016.2' height='2016.2'%3E%3Cdiv xmlns='http://www.w3.org/1999/xhtml' style='background:conic-gradient(from 90deg,rgba(80, 176, 248, 1) 0deg,rgba(175, 82, 222, 1) 360deg);height:100%25;width:100%25;opacity:1'%3E%3C/div%3E%3C/foreignObject%3E%3C/g%3E%3C/g%3E%3Cellipse cx='309.429' cy='517.106' rx='101.273' ry='142.857' transform='rotate(-118.798 309.429 517.106)' data-figma-gradient-fill='%7B&quot;type&quot;:&quot;GRADIENT_ANGULAR&quot;,&quot;stops&quot;:%5B%7B&quot;color&quot;:%7B&quot;r&quot;:0.31372550129890442,&quot;g&quot;:0.69019609689712524,&quot;b&quot;:0.97254902124404907,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.0%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:0.68627452850341797,&quot;g&quot;:0.32156863808631897,&quot;b&quot;:0.87058824300765991,&quot;a&quot;:1.0%7D,&quot;position&quot;:1.0%7D%5D,&quot;stopsVar&quot;:%5B%7B&quot;color&quot;:%7B&quot;r&quot;:0.31372550129890442,&quot;g&quot;:0.69019609689712524,&quot;b&quot;:0.97254902124404907,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.0%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:0.68627452850341797,&quot;g&quot;:0.32156863808631897,&quot;b&quot;:0.87058824300765991,&quot;a&quot;:1.0%7D,&quot;position&quot;:1.0%7D%5D,&quot;transform&quot;:%7B&quot;m00&quot;:250.37742614746094,&quot;m01&quot;:97.572280883789062,&quot;m02&quot;:135.45384216308594,&quot;m10&quot;:-137.63758850097656,&quot;m11&quot;:177.49436950683594,&quot;m12&quot;:497.17752075195312%7D,&quot;opacity&quot;:1.0,&quot;blendMode&quot;:&quot;NORMAL&quot;,&quot;visible&quot;:true%7D'/%3E%3C/g%3E%3Cg opacity='0.32' filter='url(%23filter6_f_2488_16151)'%3E%3Cg clip-path='url(%23paint6_angular_2488_16151_clip_path)' data-figma-skip-parse='true'%3E%3Cg transform='matrix(0.147703 -0.0611186 0.0394022 0.0952222 322.855 487.709)'%3E%3CforeignObject x='-1007.96' y='-1007.96' width='2015.92' height='2015.92'%3E%3Cdiv xmlns='http://www.w3.org/1999/xhtml' style='background:conic-gradient(from 90deg,rgba(80, 176, 248, 1) 0deg,rgba(175, 82, 222, 1) 360deg);height:100%25;width:100%25;opacity:1'%3E%3C/div%3E%3C/foreignObject%3E%3C/g%3E%3C/g%3E%3Cellipse cx='322.855' cy='487.709' rx='103.052' ry='159.849' transform='rotate(-112.479 322.855 487.709)' data-figma-gradient-fill='%7B&quot;type&quot;:&quot;GRADIENT_ANGULAR&quot;,&quot;stops&quot;:%5B%7B&quot;color&quot;:%7B&quot;r&quot;:0.31372550129890442,&quot;g&quot;:0.69019609689712524,&quot;b&quot;:0.97254902124404907,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.0%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:0.68627452850341797,&quot;g&quot;:0.32156863808631897,&quot;b&quot;:0.87058824300765991,&quot;a&quot;:1.0%7D,&quot;position&quot;:1.0%7D%5D,&quot;stopsVar&quot;:%5B%7B&quot;color&quot;:%7B&quot;r&quot;:0.31372550129890442,&quot;g&quot;:0.69019609689712524,&quot;b&quot;:0.97254902124404907,&quot;a&quot;:1.0%7D,&quot;position&quot;:0.0%7D,%7B&quot;color&quot;:%7B&quot;r&quot;:0.68627452850341797,&quot;g&quot;:0.32156863808631897,&quot;b&quot;:0.87058824300765991,&quot;a&quot;:1.0%7D,&quot;position&quot;:1.0%7D%5D,&quot;transform&quot;:%7B&quot;m00&quot;:295.40695190429688,&quot;m01&quot;:78.804473876953125,&quot;m02&quot;:135.74899291992188,&quot;m10&quot;:-122.23725128173828,&quot;m11&quot;:190.44430541992188,&quot;m12&quot;:453.60549926757812%7D,&quot;opacity&quot;:1.0,&quot;blendMode&quot;:&quot;NORMAL&quot;,&quot;visible&quot;:true%7D'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_2488_16151' x='0' y='0' width='691.614' height='692.891' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='75' result='effect1_foregroundBlur_2488_16151'/%3E%3C/filter%3E%3CclipPath id='paint0_angular_2488_16151_clip_path'%3E%3Cellipse cx='202.908' cy='189.099' rx='202.908' ry='189.099' transform='matrix(0.690609 0.723229 0.723229 -0.690609 68.9148 330.29)'/%3E%3C/clipPath%3E%3Cfilter id='filter1_f_2488_16151' x='229.316' y='18.2965' width='517.827' height='511.209' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='61.5046' result='effect1_foregroundBlur_2488_16151'/%3E%3C/filter%3E%3CclipPath id='paint1_angular_2488_16151_clip_path'%3E%3Cellipse cx='139.391' cy='128.903' rx='139.391' ry='128.903' transform='matrix(0.810833 0.585277 0.585277 -0.810833 299.762 296.837)'/%3E%3C/clipPath%3E%3Cfilter id='filter2_f_2488_16151' x='108.098' y='53.5016' width='754.646' height='688.074' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='104.558' result='effect1_foregroundBlur_2488_16151'/%3E%3C/filter%3E%3CclipPath id='paint2_angular_2488_16151_clip_path'%3E%3Cellipse cx='485.421' cy='397.539' rx='123.357' ry='176.81' transform='rotate(-115.544 485.421 397.539)'/%3E%3C/clipPath%3E%3Cfilter id='filter3_f_2488_16151' x='49.2369' y='150.772' width='556.204' height='504.742' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='61.5046' result='effect1_foregroundBlur_2488_16151'/%3E%3C/filter%3E%3CclipPath id='paint3_angular_2488_16151_clip_path'%3E%3Cellipse cx='327.339' cy='403.143' rx='123.357' ry='159.849' transform='rotate(-112.479 327.339 403.143)'/%3E%3C/clipPath%3E%3Cfilter id='filter4_f_2488_16151' x='230.078' y='263.202' width='555.861' height='502.33' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='61.5046' result='effect1_foregroundBlur_2488_16151'/%3E%3C/filter%3E%3CclipPath id='paint4_angular_2488_16151_clip_path'%3E%3Cellipse cx='508.009' cy='514.367' rx='121.876' ry='159.849' transform='rotate(-112.479 508.009 514.367)'/%3E%3C/clipPath%3E%3Cfilter id='filter5_f_2488_16151' x='52.0246' y='281.788' width='514.808' height='470.637' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='61.5046' result='effect1_foregroundBlur_2488_16151'/%3E%3C/filter%3E%3CclipPath id='paint5_angular_2488_16151_clip_path'%3E%3Cellipse cx='309.429' cy='517.106' rx='101.273' ry='142.857' transform='rotate(-118.798 309.429 517.106)'/%3E%3C/clipPath%3E%3Cfilter id='filter6_f_2488_16151' x='46.9389' y='251.537' width='551.832' height='472.345' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='61.5046' result='effect1_foregroundBlur_2488_16151'/%3E%3C/filter%3E%3CclipPath id='paint6_angular_2488_16151_clip_path'%3E%3Cellipse cx='322.855' cy='487.709' rx='103.052' ry='159.849' transform='rotate(-112.479 322.855 487.709)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") no-repeat center / contain;
+
+    @include respond(md) {
+      inset: px-to-rem(-155);
+    }
+  }
+}
+
+.tech__picture-image {
+  object-fit: cover;
+
+  @include respond(md) {
+    height: px-to-rem(568);
+  }
+}

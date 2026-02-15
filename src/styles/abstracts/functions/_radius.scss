@@ -1,0 +1,6 @@
+@use "sass:map";
+@use "../variables/variables" as *;
+
+@function radius($key) {
+  @return map.get($border-radius, $key);
+}

@@ -1,0 +1,57 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.card-checkbox {
+  display: grid;
+}
+
+.card-checkbox--three-cols {
+  gap: px-to-rem(8);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card-checkbox--two-cols {
+  gap: px-to-rem(12);
+  grid-template-columns: repeat(2, 1fr);
+
+  .card-checkbox__card {
+    gap: px-to-rem(4);
+  }
+}
+
+.card-checkbox__option {
+  position: relative;
+  cursor: pointer;
+}
+
+.card-checkbox__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card-checkbox__card {
+  padding: px-to-rem(16);
+  border-radius: radius(sm-l);
+  background: get-color($backgrounds, secondary);
+  border: px-to-rem(1) solid get-color($strokes, secondary);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-checkbox__title {
+  font-weight: 500;
+  @include font-style(subtitleLarge);
+}
+
+.card-checkbox__desc {
+  color: get-color($text-colors, gray);
+  @include font-style(subtitle);
+}
+
+.card-checkbox__option:hover .card-checkbox__card,
+.card-checkbox__input:checked + .card-checkbox__card {
+  background: get-color($backgrounds, secondary-light);
+}

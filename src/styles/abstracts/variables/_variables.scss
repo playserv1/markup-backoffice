@@ -1,0 +1,147 @@
+@use "sass:map";
+@use "../../base/fonts";
+@use "../functions/px-to-rem" as *;
+
+/* Fonts */
+$font-inter-tight: 'Inter Tight', sans-serif;
+$font-ibm-plex-mono: 'IBM Plex Mono', monospace;
+$font-neue-montreal: 'Neue Montreal', sans-serif;
+
+/* Breakpoints */
+$screen-xs:      360px;
+$screen-sm-min:  576px;
+$screen-sm-max:  ($screen-sm-min - 1px);
+$screen-md-min:  744px;
+$screen-md-max:  ($screen-md-min - 1px);
+$screen-lg-min:  992px;
+$screen-lg-max:  ($screen-lg-min - 1px);
+$screen-xl-min:  1200px;
+$screen-xl-max:  ($screen-xl-min - 1px);
+$screen-xxl-min: 1400px;
+$screen-xxl-max: ($screen-xxl-min - 1px);
+$screen-extra:   1600px;
+
+// Border-radius variables
+$border-radius: (
+  tiny: px-to-rem(8),
+  xs: px-to-rem(12),
+  sm: px-to-rem(14),
+  sm-l: px-to-rem(16),
+  md: px-to-rem(28),
+  lg-s: px-to-rem(30),
+  lg: px-to-rem(32),
+  lg-l: px-to-rem(40),
+  xl: px-to-rem(100),
+  round: 50%,
+);
+
+/* Primitive Colors */
+$primitives: (
+  white: #FFFFFF,
+  white-1: rgba(255, 255, 255, 0.1),
+  white-2: rgba(255, 255, 255, 0.2),
+  white-5: rgba(255, 255, 255, 0.05),
+  white-6: rgba(255, 255, 255, 0.06),
+  white-15: rgba(255, 255, 255, 0.15),
+
+  black: #000000,
+  black-6: rgba(0, 0, 0, 0.6),
+  black-deep: #000004,
+
+  gray-900-2: rgba(10, 10, 10, 0.2),
+  gray-900: #0A0A0A,
+  gray-800: #1F1F1F,
+  gray-700: #41485E,
+  gray-600: #8A909D,
+  gray-500: #8890A8,
+  gray-500-12: rgba(136, 144, 168, 0.12),
+  gray-400: #909296,
+  gray-100: #E8F2F5,
+
+  accent-orange: #F15C11,
+  accent-purple: #926FFF,
+  card-hover-gradient: conic-gradient(from 107.26deg at 50% 50%, #FF9500 -35.09deg, #AF52DE 131.39deg, #FF3B30 279.88deg, #FF9500 324.91deg, #AF52DE 491.39deg),
+  progress-gradient: conic-gradient(from 187.1deg at 125.22% 428.75%, #71019A -38.72deg, #7CACE4 0.86deg, #54056E 55.87deg, #F22929 145.24deg, #F15C11 183.52deg, #F15C11 244.04deg, #71019A 321.28deg, #7CACE4 360.86deg),
+
+  success: #2AC769,
+  warning: #F6A609,
+  error: #FB4E4E
+);
+
+/* Semantic Tokens */
+
+/* Backgrounds */
+$backgrounds: (
+  dark: map.get($primitives, black),
+  dark-opacity: map.get($primitives, black-6),
+  primary: map.get($primitives, black-deep),
+  gray-dark: map.get($primitives, gray-900-2),
+  secondary: map.get($primitives, white-5),
+  secondary-light: map.get($primitives, white-15),
+);
+
+/* Text */
+$text-colors: (
+  dark-opacity: map.get($primitives, black-6),
+  primary: map.get($primitives, white),
+  secondary: map.get($primitives, gray-500),
+  tertiary: map.get($primitives, black-deep),
+  quaternary: map.get($primitives, gray-600),
+  quinary: map.get($primitives, gray-700),
+  gray: map.get($primitives, gray-400),
+  gray-lighter: map.get($primitives, white-2),
+);
+
+/* Strokes / Borders */
+$strokes: (
+  lighter: map.get($primitives, white),
+  light: map.get($primitives, white-1),
+  primary: map.get($primitives, gray-800),
+  secondary: map.get($primitives, white-5),
+  secondary-lighter: map.get($primitives, white-6),
+  quaternary: map.get($primitives, gray-100),
+  gray: map.get($primitives, gray-500-12),
+  accent-orange: map.get($primitives, accent-orange),
+);
+
+$stroke-gradients: (
+  subtle: linear-gradient(180deg, #EEF3F5 0%, #D8E4E9 100%),
+  subtle-accent: linear-gradient(180deg, #EEF3F5 0%, #76BDD5 100%)
+);
+
+/* Surfaces */
+$surfaces: (
+  primary: map.get($primitives, white),
+  secondary: map.get($primitives, gray-900),
+  secondary-lighter: map.get($primitives, white-6),
+  gray: map.get($primitives, gray-500-12)
+);
+
+$surface-gradients: (
+  dark: linear-gradient(180deg, #212121 0%, #0A0A0A 100%),
+  dark-to-transparent: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%),
+  dark-accent: (linear-gradient(180deg, rgba(7, 7, 9, 0.1) 0%, #926FFF 100%), linear-gradient(180deg, #212121 0%, #0A0A0A 100%)),
+  dark-gray: linear-gradient(180deg, rgba(10, 10, 10, 0.5) 0%, rgba(33, 33, 33, 0.5) 100%),
+  light: linear-gradient(180deg, #FFFFFF 0%, #F3F8FA 100%),
+  light-accent: linear-gradient(180deg, #FFFFFF 0%, #B0D9E7 100%),
+  gray: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.04) 100%),
+  gray-dark: linear-gradient(208.03deg, rgba(255, 255, 255, 0.1) 9.87%, rgba(255, 255, 255, 0) 82.63%),
+);
+
+/* Accent */
+$accents: (
+  primary: map.get($primitives, accent-purple)
+);
+
+/* Icons */
+$icon-colors: (
+  primary: map.get($primitives, black),
+  secondary: map.get($primitives, white)
+);
+
+/* Alerts */
+$alerts: (
+  success: map.get($primitives, success),
+  warning: map.get($primitives, warning),
+  error: map.get($primitives, error)
+);

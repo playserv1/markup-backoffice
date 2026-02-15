@@ -1,0 +1,33 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.nav__menu {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include respond(lg) {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
+.nav__link {
+  color: get-color($text-colors, primary);
+  opacity: 0.6;
+  transition: 0.3s;
+  @include font-style(h3);
+
+  @include respond(lg) {
+    @include font-style(actionSmall);
+  }
+
+  &:hover,
+  &.nav__link--active {
+    opacity: 1;
+  }
+}

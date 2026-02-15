@@ -1,0 +1,23 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.links {
+  align-items: center;
+  display: flex;
+  gap: px-to-rem(12);
+
+  @include respond(lg) {
+    gap: px-to-rem(20);
+  }
+}
+
+.links__item {
+  color: get-color($text-colors, gray);
+  font-size: px-to-rem(12);
+  line-height: px-to-rem(18);
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 1;
+  }
+}

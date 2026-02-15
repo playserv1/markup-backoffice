@@ -1,0 +1,75 @@
+@use "sass:map";
+@use "../functions/px-to-rem" as *;
+
+$typography: (
+  h1: (
+    mobile:  (size: px-to-rem(36), line: px-to-rem(44)),
+    tablet:  (size: px-to-rem(52), line: px-to-rem(60)),
+    desktop: (size: px-to-rem(56), line: px-to-rem(64)),
+  ),
+  h2: (
+    mobile:  (size: px-to-rem(32), line: px-to-rem(48)),
+    tablet:  (size: px-to-rem(36), line: px-to-rem(44)),
+    desktop: (size: px-to-rem(48), line: px-to-rem(56)),
+  ),
+  h2-static: (
+    mobile:  (size: px-to-rem(48), line: px-to-rem(56)),
+    tablet:  (size: px-to-rem(48), line: px-to-rem(56)),
+    desktop: (size: px-to-rem(48), line: px-to-rem(56)),
+  ),
+  h3: (
+    mobile:  (size: px-to-rem(36), line: px-to-rem(44)),
+    tablet:  (size: px-to-rem(36), line: px-to-rem(44)),
+    desktop: (size: px-to-rem(36), line: px-to-rem(56)),
+  ),
+  h4: (
+    mobile:  (size: px-to-rem(20), line: px-to-rem(30)),
+    tablet:  (size: px-to-rem(24), line: px-to-rem(32)),
+    desktop: (size: px-to-rem(24), line: px-to-rem(32)),
+  ),
+  h5: (
+    mobile:  (size: px-to-rem(20), line: px-to-rem(30)),
+    tablet:  (size: px-to-rem(20), line: px-to-rem(30)),
+    desktop: (size: px-to-rem(20), line: px-to-rem(30)),
+  ),
+  large: (
+    mobile:  (size: px-to-rem(36), line: px-to-rem(44)),
+    tablet:  (size: px-to-rem(36), line: px-to-rem(44)),
+    desktop: (size: px-to-rem(64), line: px-to-rem(72)),
+  ),
+  body: (
+    mobile:  (size: px-to-rem(16), line: px-to-rem(24)),
+    tablet:  (size: px-to-rem(16), line: px-to-rem(24)),
+    desktop: (size: px-to-rem(16), line: px-to-rem(24)),
+  ),
+  bodySmall: (
+    mobile:  (size: px-to-rem(14), line: px-to-rem(20)),
+    tablet:  (size: px-to-rem(14), line: px-to-rem(20)),
+    desktop: (size: px-to-rem(14), line: px-to-rem(20)),
+  ),
+  bodyLarge: (
+    mobile:  (size: px-to-rem(18), line: px-to-rem(26)),
+    tablet:  (size: px-to-rem(18), line: px-to-rem(26)),
+    desktop: (size: px-to-rem(18), line: px-to-rem(26)),
+  ),
+  actionLarge: (
+    mobile:  (size: px-to-rem(16), line: px-to-rem(24)),
+    tablet:  (size: px-to-rem(16), line: px-to-rem(24)),
+    desktop: (size: px-to-rem(16), line: px-to-rem(24)),
+  ),
+  actionSmall: (
+    mobile:  (size: px-to-rem(14), line: px-to-rem(20)),
+    tablet:  (size: px-to-rem(14), line: px-to-rem(20)),
+    desktop: (size: px-to-rem(14), line: px-to-rem(20)),
+  ),
+  subtitle: (
+    mobile:  (size: px-to-rem(12), line: px-to-rem(16)),
+    tablet:  (size: px-to-rem(12), line: px-to-rem(16)),
+    desktop: (size: px-to-rem(12), line: px-to-rem(16)),
+  ),
+  subtitleLarge: (
+    mobile:  (size: px-to-rem(14), line: px-to-rem(20)),
+    tablet:  (size: px-to-rem(14), line: px-to-rem(20)),
+    desktop: (size: px-to-rem(14), line: px-to-rem(20)),
+  ),
+);

@@ -1,0 +1,22 @@
+@use "sass:map";
+@use "../variables/variables";
+
+$breakpoints: (
+  xs: variables.$screen-xs,
+  sm: variables.$screen-sm-min,
+  md: variables.$screen-md-min,
+  lg: variables.$screen-lg-min,
+  xl: variables.$screen-xl-min,
+  xxl: variables.$screen-xxl-min,
+  extra: variables.$screen-extra,
+);
+
+@mixin respond($size) {
+  @if map.has-key($breakpoints, $size) {
+    @media (min-width: map.get($breakpoints, $size)) {
+      @content;
+    }
+  } @else {
+    @error "Unknown breakpoint: #{$size}";
+  }
+}

@@ -1,0 +1,29 @@
+@use "../abstracts/variables/variables";
+@use "../abstracts/mixins/breakpoints" as *;
+@use '../abstracts/functions/px-to-rem' as *;
+@use "../utilities/text-styles";
+
+.landing-page {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "info"
+    "image"
+    "social";
+  grid-template-columns: 1fr;
+  align-items: start;
+  text-align: center;
+  height: 100%;
+
+  @include respond(extra) {
+    grid-template-areas:
+      "info image"
+      "social image";
+    grid-template-columns: min-content;
+    grid-template-rows: auto 1fr;
+    padding: 0;
+    text-align: left;
+    overflow: hidden;
+    height: 100vh;
+  }
+}

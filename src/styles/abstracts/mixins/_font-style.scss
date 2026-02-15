@@ -1,0 +1,27 @@
+@use "sass:map";
+@use "../variables/typography";
+@use "./breakpoints" as *;
+
+@mixin font-style($name) {
+  $style: map.get(typography.$typography, $name);
+
+  @if $style == null {
+    @error "Unknown typography style: #{$name}";
+  }
+
+  $mobile: map.get($style, mobile);
+  font-size: map.get($mobile, size);
+  line-height: map.get($mobile, line);
+
+  @include respond(md) {
+    $tablet: map.get($style, tablet);
+    font-size: map.get($tablet, size);
+    line-height: map.get($tablet, line);
+  }
+
+  @include respond(lg) {
+    $desktop: map.get($style, desktop);
+    font-size: map.get($desktop, size);
+    line-height: map.get($desktop, line);
+  }
+}

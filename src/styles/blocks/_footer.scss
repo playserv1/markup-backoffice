@@ -1,0 +1,124 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.footer {
+  margin-top: auto;
+  padding: px-to-rem(60) 0 px-to-rem(20);
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: px-to-rem(1);
+    background: get-color($strokes, light);
+    max-width: px-to-rem(1440);
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+  }
+}
+
+.footer__legal {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(4);
+
+  @include respond(lg) {
+    flex-direction: row;
+    gap: px-to-rem(20);
+  }
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(40);
+
+  @include respond(lg) {
+    gap: px-to-rem(97);
+  }
+}
+
+.footer__top {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(40);
+  text-align: center;
+
+  @include respond(lg) {
+    align-items: initial;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: px-to-rem(16) 0;
+    text-align: initial;
+  }
+}
+
+.footer__bottom {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(20);
+
+  @include respond(lg) {
+    align-items: initial;
+    border-top: px-to-rem(1) solid get-color($strokes, light);
+    flex-direction: row;
+    justify-content: space-between;
+    gap: px-to-rem(40);
+    padding-top: px-to-rem(20);
+  }
+}
+
+.footer__brand {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(20);
+  max-width: px-to-rem(560);
+
+  @include respond(lg) {
+    align-items: flex-start;
+    gap: px-to-rem(16);
+  }
+}
+
+.footer__newsletter {
+  width: 100%;
+
+  @include respond(lg) {
+    max-width: px-to-rem(368);
+  }
+}
+
+.footer__title {
+  font-weight: 600;
+  @include font-style(h5);
+
+  @include respond(lg) {
+    margin-bottom: px-to-rem(4);
+  }
+}
+
+.footer__description {
+  color: get-color($text-colors, gray);
+  @include font-style(body);
+}
+
+.footer__subscribe {
+  margin-top: px-to-rem(20);
+
+  @include respond(lg) {
+    margin-top: px-to-rem(24);
+  }
+}
+
+.footer__copyright {
+  color: get-color($text-colors, gray);
+  font-size: px-to-rem(12);
+  line-height: px-to-rem(18);
+  opacity: 0.6;
+}

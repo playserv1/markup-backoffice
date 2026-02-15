@@ -1,0 +1,43 @@
+@use "base/reset";
+@use "base/base";
+@use "base/fonts";
+
+//blocks
+@use "blocks/button";
+@use "blocks/header";
+@use "blocks/logo";
+@use "blocks/nav";
+@use "blocks/burger";
+@use "blocks/footer";
+@use "blocks/socials";
+@use "blocks/form";
+@use "blocks/links";
+@use "blocks/hero";
+@use "blocks/features";
+@use "blocks/icon-box";
+@use "blocks/play-button";
+@use "blocks/badge";
+@use "blocks/flow";
+@use "blocks/card";
+@use "blocks/contact-us";
+@use "blocks/tech";
+@use "blocks/testimonials";
+@use "blocks/person-card";
+@use "blocks/poll";
+@use "blocks/vote-list";
+@use "blocks/progress-bar";
+@use "blocks/possibilities";
+@use "blocks/architectures";
+@use "blocks/check-list";
+@use "blocks/cost";
+@use "blocks/tabs";
+@use "blocks/tooltip";
+@use "blocks/calculator";
+@use "blocks/card-checkbox";
+@use "blocks/range";
+
+//layout
+@use "layout/container.scss";
+
+//pages
+@use "pages/landing";

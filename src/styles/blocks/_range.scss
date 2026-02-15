@@ -1,0 +1,62 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.range {
+  align-items: flex-end;
+  display: flex;
+  gap: px-to-rem(28);
+}
+
+.range__top {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  color: get-color($text-colors, gray);
+}
+
+.range__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(14);
+  width: 100%;
+  padding-bottom: px-to-rem(7);
+}
+
+.range__input {
+  -webkit-appearance: none;
+  width: 100%;
+  height: px-to-rem(10);
+  border-radius: px-to-rem(4);
+  background: get-color($surfaces, gray);
+  outline: none;
+  cursor: pointer;
+  border: px-to-rem(1) solid get-color($strokes, primary);
+}
+
+.range__input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: px-to-rem(24);
+  height: px-to-rem(24);
+  border-radius: radius(round);
+  background: linear-gradient(161.57deg, #FFFFFF 41.34%, #E5E5E5 100.49%);
+  border: px-to-rem(4) solid get-color($strokes, accent-orange);
+  cursor: pointer;
+  box-shadow: 0 0 px-to-rem(4) #151722;
+  transition: transform 0.2s;
+}
+
+.range__input::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.range__value {
+  min-width: px-to-rem(100);
+  text-align: center;
+  padding: px-to-rem(10) px-to-rem(16);
+  background: get-color($surfaces, secondary-lighter);
+  border: px-to-rem(1) solid get-color($strokes, secondary-lighter);
+  border-radius: radius(lg-s);
+  height: px-to-rem(40);
+  @include font-style(subtitleLarge);
+}

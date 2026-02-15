@@ -1,0 +1,210 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.architectures {
+  border-top: px-to-rem(1) solid get-color($strokes, light);
+  padding: px-to-rem(80) 0;
+
+  @include respond(lg) {
+    border: none;
+    padding-top: px-to-rem(70);
+    padding-bottom: px-to-rem(101);
+  }
+}
+
+.architectures__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.architectures__title {
+  margin-bottom: px-to-rem(20);
+}
+
+.architectures__description {
+  margin-bottom: px-to-rem(36);
+  max-width: px-to-rem(650);
+}
+
+.architectures__number {
+  font-weight: 500;
+  font-size: px-to-rem(100);
+  line-height: px-to-rem(90);
+  text-align: center;
+  letter-spacing: px-to-rem(-2);
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  position: relative;
+  font-family: $font-neue-montreal;
+
+  @include respond(lg) {
+    margin-top: px-to-rem(24);
+    margin-bottom: px-to-rem(20);
+    font-size: px-to-rem(182);
+    line-height: px-to-rem(182);
+    letter-spacing: px-to-rem(-5);
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(180deg, rgba(0, 0, 4, 0) 0%, #000004 100%);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: px-to-rem(32);
+    pointer-events: none;
+
+    @include respond(lg) {
+      bottom: px-to-rem(10);
+    }
+  }
+}
+
+.architectures__subtitle {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.architectures__carousel {
+  margin-top: px-to-rem(30);
+  text-align: initial;
+  width: 100%;
+
+  .architectures__carousel-pagination {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: 1;
+    gap: px-to-rem(16);
+    text-align: center;
+
+    .swiper-pagination-bullet {
+      background: get-color($surfaces, primary);
+      opacity: 0.2;
+      transition: 0.3s;
+
+      &:hover,
+      &.swiper-pagination-bullet-active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.architectures__carousel-slider {
+  @include respond(md) {
+    pointer-events: none;
+  }
+
+  .swiper-wrapper {
+    @include respond(md) {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: px-to-rem(16);
+      justify-items: center;
+    }
+
+    @include respond(lg) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+.architectures__carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: px-to-rem(8);
+  margin-top: px-to-rem(32);
+
+  @include respond(md) {
+    display: none;
+  }
+}
+
+.architectures__carousel-button {
+  background: get-color($surfaces, secondary);
+  border: px-to-rem(1) solid get-color($strokes, primary);
+  border-radius: radius(lg);
+  cursor: pointer;
+  height: px-to-rem(48);
+  width: px-to-rem(48);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transition: 0.3s;
+
+  &:hover {
+    background: get-color($surface-gradients, dark);
+  }
+
+  &:last-child {
+    .architectures__carousel-button-icon {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.4;
+  }
+}
+
+.architectures__carousel-button-icon {
+  height: px-to-rem(16);
+  width: px-to-rem(16);
+}
+
+.architectures__card {
+  background: get-color($surfaces, secondary);
+  border: px-to-rem(1) solid get-color($strokes, primary);
+  border-radius: radius(lg-s);
+  padding: px-to-rem(30);
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(24);
+  height: initial;
+
+  @include respond(md) {
+    margin: 0 !important;
+    max-width: px-to-rem(560);
+    width: 100% !important;
+  }
+
+  @include respond(lg) {
+    max-width: initial;
+  }
+}
+
+.architectures__card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.architectures__card-picture {
+  border-radius: radius(tiny);
+  height: px-to-rem(223);
+  width: 100%;
+  object-fit: cover;
+
+  @include respond(md) {
+    height: 100%;
+  }
+
+  @include respond(lg) {
+    height: px-to-rem(260);
+  }
+}
+
+.architectures__card-description {
+  color: get-color($text-colors, gray);
+  margin-top: px-to-rem(5);
+  margin-bottom: px-to-rem(20);
+  flex: 1;
+}

@@ -1,0 +1,18 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+body {
+  background: get-color($backgrounds, dark);
+  color: get-color($text-colors, primary);
+  display: flex;
+  flex-direction: column;
+  font-family: $font-inter-tight;
+  min-height: 100dvh;
+  @include font-style(body);
+}
+
+main {
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+}

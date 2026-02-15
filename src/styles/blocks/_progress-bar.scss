@@ -1,0 +1,19 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.progress-bar {
+  background: get-color($surfaces, gray);
+  border: px-to-rem(1) solid get-color($strokes, gray);
+  border-radius: radius(xl);
+  height: px-to-rem(10);
+  position: relative;
+}
+
+.progress-bar__indicator {
+  background: map.get($primitives, progress-gradient);
+  border-radius: radius(xl);
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}

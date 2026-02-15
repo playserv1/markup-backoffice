@@ -1,0 +1,40 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.socials {
+  display: flex;
+  gap: px-to-rem(10);
+
+  @include respond(lg) {
+    gap: px-to-rem(8);
+  }
+}
+
+.socials__link {
+  background: get-color($backgrounds, primary);
+  border-radius: radius(round);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: px-to-rem(40);
+  width: px-to-rem(40);
+  position: relative;
+
+  &:hover {
+    background: get-color($surface-gradients, dark);
+  }
+
+  &:before {
+    background: get-color($surface-gradients, gray-dark);
+    border-radius: radius(round);
+    content: '';
+    position: absolute;
+    inset: px-to-rem(-1);
+    z-index: -1;
+  }
+}
+
+.socials__icon {
+  height: px-to-rem(24);
+  width: px-to-rem(24);
+}

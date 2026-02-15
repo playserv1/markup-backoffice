@@ -1,0 +1,48 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.cost {
+  padding: px-to-rem(90) 0 px-to-rem(121);
+}
+
+.cost__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: px-to-rem(40);
+}
+
+.cost__content {
+  width: 100%;
+}
+
+.cost__banner {
+  background: url('/assets/images/cost-banner-background.webp') no-repeat center/cover;
+  border-radius: radius(sm-l);
+  padding: px-to-rem(24) px-to-rem(40);
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(4);
+  text-align: center;
+  max-width: px-to-rem(944);
+  width: 100%;
+}
+
+.cost__banner-title {
+  font-weight: 600;
+  font-size: px-to-rem(32);
+  line-height: px-to-rem(40);
+}
+
+.cost__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: px-to-rem(10);
+  max-width: px-to-rem(944);
+  text-align: center;
+}
+
+.cost__description {
+  max-width: px-to-rem(752);
+}

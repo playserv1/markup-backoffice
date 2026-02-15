@@ -1,0 +1,86 @@
+@use "../abstracts" as *;
+
+/* Headings */
+
+.text-h1 {
+  @include font-style(h1);
+}
+
+.text-h1-strong {
+  font-weight: 600;
+  @include font-style(h1);
+}
+
+.text-h2 {
+  font-weight: 600;
+  @include font-style(h2);
+
+  @include respond(lg) {
+    letter-spacing: -0.01em;
+  }
+}
+
+.text-h2-static {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  @include font-style(h2-static);
+}
+
+.text-h3 {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  @include font-style(h3);
+}
+
+.text-h4 {
+  font-weight: 600;
+  @include font-style(h4);
+}
+
+.text-h5 {
+  font-weight: 600;
+  @include font-style(h5);
+}
+
+/* Text */
+
+.text-large {
+  font-weight: 600;
+  @include font-style(large);
+}
+
+.text-body {
+  @include font-style(body);
+}
+
+.text-body-strong {
+  font-weight: 600;
+  @include font-style(body);
+}
+
+.text-body-small {
+  @include font-style(bodySmall);
+}
+
+.text-body-large {
+  font-weight: 600;
+  @include font-style(bodyLarge);
+}
+
+.text-action-small {
+  font-weight: 600;
+  @include font-style(actionSmall);
+}
+
+.text-subtitle {
+  font-family: $font-ibm-plex-mono;
+  letter-spacing: 0.1em;
+  @include font-style(subtitle);
+}
+
+.text-subtitle-large {
+  font-family: $font-ibm-plex-mono;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  @include font-style(subtitleLarge);
+}

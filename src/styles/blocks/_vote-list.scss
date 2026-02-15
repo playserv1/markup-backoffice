@@ -1,0 +1,60 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.vote-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.vote-list__item {
+  border-top: px-to-rem(1) dashed get-color($strokes, light);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: px-to-rem(28);
+  padding: px-to-rem(10) 0;
+
+  @include respond(md) {
+    grid-template-columns: 1fr auto;
+    padding: px-to-rem(24) 0;
+  }
+
+  &:last-child {
+    border-bottom: px-to-rem(1) dashed get-color($strokes, light);
+  }
+}
+
+.vote-list__action {
+  padding: px-to-rem(8) px-to-rem(24) px-to-rem(8) px-to-rem(20);
+  gap: px-to-rem(8);
+  height: px-to-rem(40);
+  font-weight: 400;
+  @include font-style(actionLarge);
+
+  &:after {
+    background: url('/assets/icons/heart.svg') no-repeat center;
+    content: "";
+    height: px-to-rem(16);
+    width: px-to-rem(16);
+  }
+}
+
+.vote-list__statistics {
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(8);
+}
+
+.vote-list__statistics-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: px-to-rem(16);
+}
+
+.vote-list__statistics-rating {
+  color: get-color($text-colors, gray);
+  font-family: $font-ibm-plex-mono;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  @include font-style(subtitle);
+}

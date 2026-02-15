@@ -1,0 +1,1056 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Play Serv</title>
+</head>
+<body>
+    <main>
+        <header class="header">
+            <a href="/" class="logo logo--small header__logo">
+                <img class="logo__image" src="assets/icons/logo.svg" alt="PlayServ Logo">
+            </a>
+            <div class="header__controls">
+                <nav class="nav header__nav">
+                    <ul class="nav__menu">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link nav__link--active">How It Works</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Why PlayServ</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Use Cases</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Pricing</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <a href="#" class="btn btn--gray btn--small header__login-action">
+                        <span class="btn__label">Log In</span>
+                    </a>
+                    <a href="#" class="btn btn--secondary btn--small">
+                        <span class="btn__label">Book a Demo</span>
+                    </a>
+                </div>
+            </div>
+            <button class="burger header__burger" aria-label="Open menu">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </button>
+        </header>
+        <section class="hero">
+            <div class="hero__container container">
+                <div class="hero__info">
+                    <div class="hero__title-wrapper">
+                        <h1 class="hero__title text-h1-strong">
+                            All you were missing to make games
+                            <br>
+                            Deploy worldwide in a snap
+                        </h1>
+                        <p class="hero__description">
+                            Build, customize and scale multiplayer games with a single SDK, fully customizable server logic and automatic worldwide deployment — without writing network code or managing servers.
+                        </p>
+                    </div>
+                    <ul class="features">
+                        <li class="features__item">
+                            <div class="icon-box icon-box--check"></div>
+                            <span class="features__text">
+                          Global clusters close to your players
+                        </span>
+                        </li>
+                        <li class="features__item">
+                            <div class="icon-box icon-box--check"></div>
+                            <span class="features__text">
+                          Fully customizable data, logic and admin tools
+                        </span>
+                        </li>
+                        <li class="features__item">
+                            <div class="icon-box icon-box--check"></div>
+                            <span class="features__text">
+                          Multiplayer in hours, not months
+                        </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hero__action-wrapper">
+                    <picture class="hero__picture">
+                        <source srcset="assets/images/hero-picture-big.png" media="(min-width: 1600px)" />
+                        <img class="hero__picture-image" src="assets/images/hero-picture-small.png" alt="hero-picture" />
+                    </picture>
+                    <button class="play-button hero__action">
+                        <span class="play-button__icon-box">
+                            <img class="play-button__icon" src="assets/icons/play-arrow.svg" alt="play-arrow" />
+                            <img class="play-button__author" src="assets/images/author.png" alt="author" />
+                        </span>
+                        <span class="play-button__message">
+                            Watch Alan create his games easily
+                            <span class="play-button__time">
+                                2 min Watch now
+                            </span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="flow">
+            <div class="flow__container container">
+                <div class="flow__info">
+                    <div class="flow__badge badge">
+                        Instant setup
+                    </div>
+                    <h2 class="flow__title text-h2">
+                        From Idea to Global Multiplayer — <br> in One Flow
+                    </h2>
+                    <p class="flow__description">
+                        Define your game logic once —
+                        <br>
+                        PlayServ handles data, servers, synchronization and worldwide scaling.
+                    </p>
+                </div>
+                <div class="flow__cards">
+                    <div class="flow__card card">
+                        <h3 class="card__title text-h4">
+                            Define <br> Your Game World
+                        </h3>
+                        <img class="card__icon" src="assets/images/json-logo.svg" alt="JSON structure">
+                        <div class="card__body">
+                            <p class="card__subtitle text-body-small">
+                                Data, states and rules — as a single model
+                            </p>
+                            <p class="card__description text-body-small">
+                                Describe your game entities, states and relationships.
+                                Your data model becomes the source of truth for logic,
+                                sync and security.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flow__card card">
+                        <h3 class="card__title text-h4">
+                            Plug Into <br> the Engine
+                        </h3>
+                        <img class="card__icon" src="assets/images/data-exchange.svg" alt="JSON structure">
+                        <div class="card__body">
+                            <p class="card__subtitle text-body-small">
+                                No netcode. No backend. Just your game
+                            </p>
+                            <p class="card__description text-body-small">
+                                Install the SDK and work with simple abstractions: sessions, sync,
+                                services and reactive data — already handled.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flow__card card">
+                        <h3 class="card__title text-h4">
+                            Run Worldwide <br> by Default
+                        </h3>
+                        <img class="card__icon" src="assets/images/worldwide.svg" alt="JSON structure">
+                        <div class="card__body">
+                            <p class="card__subtitle text-body-small">
+                                One world. Many servers. Zero ops.
+                            </p>
+                            <p class="card__description text-body-small">
+                                Your game runs on global clusters close to players. Servers replicate
+                                the same world state — failure-resistant and cost-efficient.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="possibilities">
+            <div class="possibilities__container container">
+                <div class="possibilities__info">
+                    <div class="possibilities__badge badge">
+                        Imagine the Possibilities
+                    </div>
+                    <h2 class="possibilities__title text-h2">
+                        How This Changes the Industry
+                    </h2>
+                    <p class="possibilities__description">
+                        This isn’t fantasy. It’s what becomes possible with our backend.
+                    </p>
+                </div>
+                <div class="possibilities__carousel carousel">
+                    <div class="possibilities__carousel-slider carousel__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="possibilities__card swiper-slide">
+                                <h6 class="possibilities__card-title">
+                                    Stop Stitching Microservices
+                                </h6>
+                                <p class="possibilities__card-description">
+                                    Replace fragmented tools with one cohesive engine. Data, logic, networking, and LiveOps work as one system, giving you total control without the integration headaches.
+                                </p>
+                                <div class="possibilities__card-tree-wrapper">
+                                    <span class="possibilities__card-tree-title text-subtitle">
+                                        UNIFIED BACKEND PLATFORM
+                                    </span>
+                                    <div class="possibilities__card-tree">
+                                        <div class="possibilities__card-tree-item">
+                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <p class="possibilities__card-tree-item-name">
+                                                Networking & LiveOps built-in
+                                            </p>
+                                        </div>
+                                        <div class="possibilities__card-tree-item">
+                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <p class="possibilities__card-tree-item-name">
+                                                Transparent pricing model
+                                            </p>
+                                        </div>
+                                        <div class="possibilities__card-tree-item">
+                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <p class="possibilities__card-tree-item-name">
+                                                One dashboard for everything
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="possibilities__card swiper-slide">
+                                <h6 class="possibilities__card-title">
+                                    Multiplayer in Hours, Not Years
+                                </h6>
+                                <p class="possibilities__card-description">
+                                    Skip the netcode nightmare. Our architecture handles synchronization, prediction, and state management automatically, so you can focus entirely on the gameplay loop.
+                                </p>
+                                <div class="possibilities__card-tree-wrapper">
+                                    <span class="possibilities__card-tree-title text-subtitle">
+                                        FASTER GO-TO-MARKET
+                                    </span>
+                                    <div class="possibilities__card-tree">
+                                        <div class="possibilities__card-tree-item">
+                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <p class="possibilities__card-tree-item-name">
+                                                No networking code needed
+                                            </p>
+                                        </div>
+                                        <div class="possibilities__card-tree-item">
+                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <p class="possibilities__card-tree-item-name">
+                                                Instant prototyping
+                                            </p>
+                                        </div>
+                                        <div class="possibilities__card-tree-item">
+                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <p class="possibilities__card-tree-item-name">
+                                                No steep learning curve
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="possibilities__card swiper-slide">
+                                <h6 class="possibilities__card-title">
+                                    Your Code Defines the Backend
+                                </h6>
+                                <p class="possibilities__card-description">
+                                    Forget SQL queries and API endpoints. Simply define your game rules and data structures in code, and the platform automatically adapts to serve and sync them in real-time.
+                                </p>
+                                <div class="possibilities__card-tree-wrapper">
+                                    <span class="possibilities__card-tree-title text-subtitle">
+                                        GAME-FIRST ARCHITECTURE
+                                    </span>
+                                    <div class="possibilities__card-tree">
+                                        <div class="possibilities__card-tree-item">
+                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <p class="possibilities__card-tree-item-name">
+                                                Real-time data sync
+                                            </p>
+                                        </div>
+                                        <div class="possibilities__card-tree-item">
+                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <p class="possibilities__card-tree-item-name">
+                                                Logic defines the rules
+                                            </p>
+                                        </div>
+                                        <div class="possibilities__card-tree-item">
+                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <p class="possibilities__card-tree-item-name">
+                                                Ready-to-use templates
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="possibilities__card swiper-slide">
+                                <h6 class="possibilities__card-title">
+                                    Infinite Scale. Zero DevOps.
+                                </h6>
+                                <p class="possibilities__card-description">
+                                    Launch with confidence. Whether you have 10 players or 10 million, our global infrastructure scales automatically to meet demand. World state persists even through server failures.
+                                </p>
+                                <div class="possibilities__card-tree-wrapper">
+                                    <span class="possibilities__card-tree-title text-subtitle">
+                                        FULLY MANAGED SCALING
+                                    </span>
+                                    <div class="possibilities__card-tree">
+                                        <div class="possibilities__card-tree-item">
+                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <p class="possibilities__card-tree-item-name">
+                                                Global scaling out-of-the-box
+                                            </p>
+                                        </div>
+                                        <div class="possibilities__card-tree-item">
+                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <p class="possibilities__card-tree-item-name">
+                                                Fault-tolerant persistence
+                                            </p>
+                                        </div>
+                                        <div class="possibilities__card-tree-item">
+                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <p class="possibilities__card-tree-item-name">
+                                                Zero DevOps overhead
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="possibilities__carousel-controls">
+                        <button class="possibilities__carousel-button carousel__button--prev">
+                            <img class="possibilities__carousel-button-icon" src="assets/icons/arrow.svg" alt="arrow">
+                        </button>
+
+                        <div class="possibilities__carousel-pagination carousel__pagination"></div>
+
+                        <button class="possibilities__carousel-button carousel__button--next">
+                            <img class="possibilities__carousel-button-icon" src="assets/icons/arrow.svg" alt="arrow">
+                        </button>
+                    </div>
+                </div>
+                <button class="possibilities__btn btn btn--primary btn--large">
+                    <span class="btn__label">Book call with CEO</span>
+                </button>
+            </div>
+        </section>
+        <section class="architectures">
+            <div class="architectures__container container">
+                <h2 class="architectures__title text-h2">
+                    Specialized Architectures
+                </h2>
+                <p class="architectures__description">
+                    We currently support the "Big Three": RPG, Shooter, and Strategy.
+                    New genre blueprints are added with every update.
+                </p>
+                <span class="architectures__subtitle text-subtitle">
+                    Players per room
+                </span>
+                <span class="architectures__number">
+                    25 000
+                </span>
+                <span class="architectures__subtitle text-subtitle">
+                    ready to build
+                </span>
+                <div class="architectures__carousel carousel">
+                    <div class="architectures__carousel-slider carousel__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="architectures__card swiper-slide">
+                                <img class="architectures__card-picture" src="assets/images/game-1.webp" alt="game">
+                                <div class="architectures__card-body">
+                                    <h4 class="architectures__card-title text-h4">
+                                        Action RPG
+                                    </h4>
+                                    <p class="architectures__card-description">
+                                        Similar to: Elden Ring, Diablo IV, Cyberpunk 2077, Genshin Impact
+                                    </p>
+                                    <ul class="check-list">
+                                        <li class="check-list__item">
+                                            <img class="check-list__icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <span class="check-list__info">Large-scale multiplayer worlds</span>
+                                        </li>
+                                        <li class="check-list__item">
+                                            <img class="check-list__icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <span class="check-list__info">Quests, progression & persistence</span>
+                                        </li>
+                                        <li class="check-list__item">
+                                            <img class="check-list__icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <span class="check-list__info">Seamless sharding & sync</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="architectures__card swiper-slide">
+                                <img class="architectures__card-picture" src="assets/images/game-2.webp" alt="game">
+                                <div class="architectures__card-body">
+                                    <h4 class="architectures__card-title text-h4">
+                                        Survival / Sandbox
+                                    </h4>
+                                    <p class="architectures__card-description">
+                                        Similar to: Minecraft, Rust, ARK, Valheim
+                                    </p>
+                                    <ul class="check-list">
+                                        <li class="check-list__item">
+                                            <img class="check-list__icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <span class="check-list__info">Real-time co-op and crafting.</span>
+                                        </li>
+                                        <li class="check-list__item">
+                                            <img class="check-list__icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <span class="check-list__info">Custom servers and modding support.</span>
+                                        </li>
+                                        <li class="check-list__item">
+                                            <img class="check-list__icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <span class="check-list__info">Fast sync of large game worlds.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="architectures__card swiper-slide">
+                                <img class="architectures__card-picture" src="assets/images/game-3.webp" alt="game">
+                                <div class="architectures__card-body">
+                                    <h4 class="architectures__card-title text-h4">
+                                        Indie & Casual
+                                    </h4>
+                                    <p class="architectures__card-description">
+                                        Similar to: Stardew Valley, Among Us, Hades, Hollow Knight
+                                    </p>
+                                    <ul class="check-list">
+                                        <li class="check-list__item">
+                                            <img class="check-list__icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <span class="check-list__info">Simple integration for small teams.</span>
+                                        </li>
+                                        <li class="check-list__item">
+                                            <img class="check-list__icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <span class="check-list__info">Fast MVP launches.</span>
+                                        </li>
+                                        <li class="check-list__item">
+                                            <img class="check-list__icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <span class="check-list__info">No backend skills needed</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="architectures__carousel-controls">
+                        <button class="architectures__carousel-button carousel__button--prev">
+                            <img class="architectures__carousel-button-icon" src="assets/icons/arrow.svg" alt="arrow">
+                        </button>
+
+                        <div class="architectures__carousel-pagination carousel__pagination"></div>
+
+                        <button class="architectures__carousel-button carousel__button--next">
+                            <img class="architectures__carousel-button-icon" src="assets/icons/arrow.svg" alt="arrow">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="poll">
+            <div class="poll_container container">
+                <div class="poll__info">
+                    <h2 class="poll__title text-h2">
+                        Build the Future with Us
+                    </h2>
+                    <p class="poll__description">
+                        We prioritize development based on your needs. Cast your vote to influence which templates and features arrive in the next update.
+                    </p>
+                </div>
+                <div class="poll__cards">
+                    <div class="poll__card">
+                        <h4 class="poll__card-title text-h4">
+                            Which template next?
+                        </h4>
+                        <ul class="vote-list">
+                            <li class="vote-list__item">
+                                <span class="vote-list__statistics">
+                                    <span class="vote-list__statistics-top">
+                                        <span class="vote-list__statistics-name">
+                                            MOBA
+                                        </span>
+                                        <span class="vote-list__statistics-rating">
+                                            45%
+                                        </span>
+                                    </span>
+                                    <span class="progress-bar">
+                                        <span class="progress-bar__indicator" style="width: 45%;"></span>
+                                    </span>
+                                </span>
+                                <button class="btn btn--gray btn--small vote-list__action">
+                                    <span class="btn__label">Vote</span>
+                                </button>
+                            </li>
+                            <li class="vote-list__item">
+                                <span class="vote-list__statistics">
+                                    <span class="vote-list__statistics-top">
+                                        <span class="vote-list__statistics-name">
+                                            Sports & Racing
+                                        </span>
+                                        <span class="vote-list__statistics-rating">
+                                            32%
+                                        </span>
+                                    </span>
+                                    <span class="progress-bar">
+                                        <span class="progress-bar__indicator" style="width: 32%;"></span>
+                                    </span>
+                                </span>
+                                <button class="btn btn--gray btn--small vote-list__action">
+                                    <span class="btn__label">Vote</span>
+                                </button>
+                            </li>
+                            <li class="vote-list__item">
+                                <span class="vote-list__statistics">
+                                    <span class="vote-list__statistics-top">
+                                        <span class="vote-list__statistics-name">
+                                            Simulators
+                                        </span>
+                                        <span class="vote-list__statistics-rating">
+                                            14%
+                                        </span>
+                                    </span>
+                                    <span class="progress-bar">
+                                        <span class="progress-bar__indicator" style="width: 14%;"></span>
+                                    </span>
+                                </span>
+                                <button class="btn btn--gray btn--small vote-list__action">
+                                    <span class="btn__label">Vote</span>
+                                </button>
+                            </li>
+                            <li class="vote-list__item">
+                                <span class="vote-list__statistics">
+                                    <span class="vote-list__statistics-top">
+                                        <span class="vote-list__statistics-name">
+                                            Strategy (RTS/TBS)
+                                        </span>
+                                        <span class="vote-list__statistics-rating">
+                                            9%
+                                        </span>
+                                    </span>
+                                    <span class="progress-bar">
+                                        <span class="progress-bar__indicator" style="width: 9%;"></span>
+                                    </span>
+                                </span>
+                                <button class="btn btn--gray btn--small vote-list__action">
+                                    <span class="btn__label">Vote</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="poll__card">
+                        <h4 class="poll__card-title text-h4">
+                            What tools do you need?
+                        </h4>
+                        <ul class="vote-list">
+                            <li class="vote-list__item">
+                                <span class="vote-list__statistics">
+                                    <span class="vote-list__statistics-top">
+                                        <span class="vote-list__statistics-name">
+                                            Tournament Engine
+                                        </span>
+                                        <span class="vote-list__statistics-rating">
+                                            45%
+                                        </span>
+                                    </span>
+                                    <span class="progress-bar">
+                                        <span class="progress-bar__indicator" style="width: 45%;"></span>
+                                    </span>
+                                </span>
+                                <button class="btn btn--gray btn--small vote-list__action">
+                                    <span class="btn__label">Vote</span>
+                                </button>
+                            </li>
+                            <li class="vote-list__item">
+                                <span class="vote-list__statistics">
+                                    <span class="vote-list__statistics-top">
+                                        <span class="vote-list__statistics-name">
+                                            Skill-Based Matchmaking
+                                        </span>
+                                        <span class="vote-list__statistics-rating">
+                                            32%
+                                        </span>
+                                    </span>
+                                    <span class="progress-bar">
+                                        <span class="progress-bar__indicator" style="width: 32%;"></span>
+                                    </span>
+                                </span>
+                                <button class="btn btn--gray btn--small vote-list__action">
+                                    <span class="btn__label">Vote</span>
+                                </button>
+                            </li>
+                            <li class="vote-list__item">
+                                <span class="vote-list__statistics">
+                                    <span class="vote-list__statistics-top">
+                                        <span class="vote-list__statistics-name">
+                                            Guilds & Clan Wars
+                                        </span>
+                                        <span class="vote-list__statistics-rating">
+                                            14%
+                                        </span>
+                                    </span>
+                                    <span class="progress-bar">
+                                        <span class="progress-bar__indicator" style="width: 14%;"></span>
+                                    </span>
+                                </span>
+                                <button class="btn btn--gray btn--small vote-list__action">
+                                    <span class="btn__label">Vote</span>
+                                </button>
+                            </li>
+                            <li class="vote-list__item">
+                                <span class="vote-list__statistics">
+                                    <span class="vote-list__statistics-top">
+                                        <span class="vote-list__statistics-name">
+                                            Atomic swaps, Marketplace logic
+                                        </span>
+                                        <span class="vote-list__statistics-rating">
+                                            9%
+                                        </span>
+                                    </span>
+                                    <span class="progress-bar">
+                                        <span class="progress-bar__indicator" style="width: 9%;"></span>
+                                    </span>
+                                </span>
+                                <button class="btn btn--gray btn--small vote-list__action">
+                                    <span class="btn__label">Vote</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cost">
+            <div class="cost__container container">
+                <div class="cost__banner">
+                    <h3 class="cost__banner-title">
+                        PlayServ is currently FREE for new customers
+                    </h3>
+                    <p class="cost__banner-text">
+                        PlayServ is free for now. The calculator estimates future usage and cost once pricing is enabled
+                    </p>
+                </div>
+                <div class="cost__info">
+                    <div class="cost__badge badge">
+                        Cost Calculator
+                    </div>
+                    <h2 class="cost__title text-h2">
+                        Estimate your CCU & future monthly cost
+                    </h2>
+                    <p class="cost__description">
+                        Get a quick estimate of how many concurrent players your game may have — and
+                        what that capacity will cost per month.
+                    </p>
+                </div>
+                <div class="cost__tabs tabs" data-tabs>
+                    <button class="tabs__btn tabs__btn--active" data-tab="manual">
+                        <span class="tabs__btn-name">I know my CCU</span>
+                    </button>
+                    <button class="tabs__btn" data-tab="auto">
+                        <span class="tabs__btn-name">Help me estimate</span>
+                    </button>
+                </div>
+                <div class="cost__content">
+                    <div class="tabs__content tabs__content--active" data-tab-content="manual">
+                        <div class="calculator">
+                            <div class="calculator__actions">
+                                <h4 class="calculator__title text-h4">
+                                    Enter your expected CCU
+                                    <span class="calculator__tooltip tooltip" data-tooltip="This is your tooltip text"></span>
+                                </h4>
+                                <div class="calculator__span">
+                                    Expected Average CCU
+                                </div>
+                                <div class="calculator__range range" data-range>
+                                    <div class="range__body">
+                                        <div class="range__top">
+                                            <span class="range__min text-subtitle">10 CCU</span>
+                                            <span class="range__max text-subtitle">100K+</span>
+                                        </div>
+                                        <input
+                                                type="range"
+                                                min="10"
+                                                max="100000"
+                                                value="250"
+                                                class="range__input"
+                                        />
+                                    </div>
+                                    <div class="range__value">250</div>
+                                </div>
+                                <div class="calculator__cards-wrapper">
+                                    <h6 class="calculator__subtitle text-body-large">
+                                        What affects your CCU?
+                                    </h6>
+                                    <div class="calculator__card-checkbox card-checkbox card-checkbox--two-cols" role="radiogroup">
+                                        <label class="card-checkbox__option">
+                                            <input
+                                                type="radio"
+                                                name="ccu"
+                                                value="light"
+                                                class="card-checkbox__input"
+                                            />
+                                            <span class="card-checkbox__card">
+                                                <span class="card-checkbox__title">
+                                                    Peak hours
+                                                </span>
+                                                <span class="card-checkbox__desc">
+                                                    Most games see 5–15% of MAU online at the same time.
+                                                </span>
+                                            </span>
+                                        </label>
+                                        <label class="card-checkbox__option">
+                                            <input
+                                                type="radio"
+                                                name="ccu"
+                                                value="medium"
+                                                class="card-checkbox__input"
+                                            />
+                                            <span class="card-checkbox__card">
+                                                <span class="card-checkbox__title">
+                                                    Match size / game mode
+                                                </span>
+                                                <span class="card-checkbox__desc">
+                                                    Larger lobbies = higher CCU.
+                                                </span>
+                                            </span>
+                                        </label>
+                                        <label class="card-checkbox__option">
+                                            <input
+                                                type="radio"
+                                                name="ccu"
+                                                value="high"
+                                                class="card-checkbox__input"
+                                                checked
+                                            />
+                                            <span class="card-checkbox__card">
+                                                <span class="card-checkbox__title">
+                                                    Regions you support
+                                                </span>
+                                                <span class="card-checkbox__desc">
+                                                    Multi-region deployments split CCU across servers.
+                                                </span>
+                                            </span>
+                                        </label>
+                                        <label class="card-checkbox__option">
+                                            <input
+                                                type="radio"
+                                                name="ccu"
+                                                value="high"
+                                                class="card-checkbox__input"
+                                                checked
+                                            />
+                                            <span class="card-checkbox__card">
+                                                <span class="card-checkbox__title">
+                                                    Session length
+                                                </span>
+                                                <span class="card-checkbox__desc">
+                                                    Longer sessions increase average concurrency.
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="calculator__span">
+                                    Gameplay Intensity
+                                    <span class="calculator__tooltip tooltip tooltip--secondary" data-tooltip="This is your tooltip text"></span>
+                                </div>
+                                <div class="calculator__card-checkbox card-checkbox card-checkbox--three-cols" role="radiogroup">
+                                    <label class="card-checkbox__option">
+                                        <input
+                                                type="radio"
+                                                name="card-checkbox"
+                                                value="light"
+                                                class="card-checkbox__input"
+                                        />
+                                        <span class="card-checkbox__card">
+                                        <span class="card-checkbox__title">Light</span>
+                                        <span class="card-checkbox__desc">Casual / turn-based</span>
+                                    </span>
+                                    </label>
+                                    <label class="card-checkbox__option">
+                                        <input
+                                                type="radio"
+                                                name="card-checkbox"
+                                                value="medium"
+                                                class="card-checkbox__input"
+                                        />
+                                        <span class="card-checkbox__card">
+                                        <span class="card-checkbox__title">Medium</span>
+                                        <span class="card-checkbox__desc">Session co-op</span>
+                                    </span>
+                                    </label>
+                                    <label class="card-checkbox__option">
+                                        <input
+                                                type="radio"
+                                                name="card-checkbox"
+                                                value="high"
+                                                class="card-checkbox__input"
+                                                checked
+                                        />
+                                        <span class="card-checkbox__card">
+                                        <span class="card-checkbox__title">High</span>
+                                        <span class="card-checkbox__desc">Fast-paced / always-on</span>
+                                    </span>
+                                    </label>
+
+                                </div>
+                            </div>
+                            <div class="calculator__estimate">
+                                <h5 class="calculator__estimate-subtitle text-h5">Your Estimate</h5>
+                                <span class="calculator__estimate-title">$5</span>
+                                <span class="calculator__estimate-span">Estimated monthly cost</span>
+                                <div class="calculator__estimate-info">
+                                    <div class="calculator__estimate-row">
+                                        <div class="calculator__estimate-col">
+                                            Estimated average CCU:
+                                        </div>
+                                        <div class="calculator__estimate-col">
+                                            250 players
+                                        </div>
+                                    </div>
+                                    <div class="calculator__estimate-row">
+                                        <div class="calculator__estimate-col">
+                                            Estimated peak CCU:
+                                        </div>
+                                        <div class="calculator__estimate-col">
+                                            250 players
+                                        </div>
+                                    </div>
+                                    <div class="calculator__estimate-row">
+                                        <div class="calculator__estimate-col">
+                                            Price per CCU / month:
+                                        </div>
+                                        <div class="calculator__estimate-col">
+                                            $0.03
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="calculator__estimate-btn btn btn--primary btn--large">
+                                    <span class="btn__label">Start for free</span>
+                                </button>
+                                <span class="calculator__estimate-description">
+                                    No credit card required. You can tweak limits or move to production pricing at any time
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs__content" data-tab-content="auto">
+                        <p class="cost__hint">Auto estimation coming soon...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonials">
+            <div class="testimonials__container container">
+                <div class="testimonials__info">
+                    <div class="testimonials__badge badge">
+                        Testimonials
+                    </div>
+                    <h2 class="testimonials__title text-h2">
+                        Trusted by Gamedev Innovators
+                    </h2>
+                </div>
+                <div class="testimonials__carousel carousel">
+                    <div class="testimonials__carousel-slider carousel__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="testimonials__carousel-slide swiper-slide">
+                                <div class="testimonials__carousel-person-card person-card">
+                                    <img class="person-card__picture" src="assets/images/liam-jonson.png" alt="liam-jonson">
+                                    <div class="person-card__info">
+                                        <div class="person-card__info-row">
+                                            <div class="person-card__title">Liam Jonson</div>
+                                            <div class="person-card__social-type">LinkedIn</div>
+                                        </div>
+                                        <div class="person-card__info-row">
+                                            <div class="person-card__description">CEO, RuneHorizon.com</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonials__carousel-slide-info">
+                                    <h4 class="testimonials__carousel-slide-title text-h4">
+                                        “We’ve been working with this team for over seven years, delivering several complex MMO projects together. During this time, they’ve consistently proven their ability to solve problems that even large studios struggle with. While we haven’t yet used their new platform directly, I’ve seen how their approaches to architecture and real-time world synchronization have evolved.”
+                                    </h4>
+                                    <h2 class="testimonials__carousel-slide-subtitle text-h2-static">
+                                        8x
+                                    </h2>
+                                    <p class="testimonials__carousel-slide-description">
+                                        increase in data processing effciency
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="testimonials__carousel-slide swiper-slide">
+                                <div class="testimonials__carousel-person-card person-card">
+                                    <img class="person-card__picture" src="assets/images/liam-jonson.png" alt="liam-jonson">
+                                    <div class="person-card__info">
+                                        <div class="person-card__info-row">
+                                            <div class="person-card__title">Liam Jonson</div>
+                                            <div class="person-card__social-type">LinkedIn</div>
+                                        </div>
+                                        <div class="person-card__info-row">
+                                            <div class="person-card__description">CEO, RuneHorizon.com</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonials__carousel-slide-info">
+                                    <h4 class="testimonials__carousel-slide-title text-h4">
+                                        “We’ve been working with this team for over seven years, delivering several complex MMO projects together. During this time, they’ve consistently proven their ability to solve problems that even large studios struggle with. While we haven’t yet used their new platform directly, I’ve seen how their approaches to architecture and real-time world synchronization have evolved.”
+                                    </h4>
+                                    <h2 class="testimonials__carousel-slide-subtitle text-h2-static">
+                                        8x
+                                    </h2>
+                                    <p class="testimonials__carousel-slide-description">
+                                        increase in data processing effciency
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="testimonials__carousel-slide swiper-slide">
+                                <div class="testimonials__carousel-person-card person-card">
+                                    <img class="person-card__picture" src="assets/images/liam-jonson.png" alt="liam-jonson">
+                                    <div class="person-card__info">
+                                        <div class="person-card__info-row">
+                                            <div class="person-card__title">Liam Jonson</div>
+                                            <div class="person-card__social-type">LinkedIn</div>
+                                        </div>
+                                        <div class="person-card__info-row">
+                                            <div class="person-card__description">CEO, RuneHorizon.com</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonials__carousel-slide-info">
+                                    <h4 class="testimonials__carousel-slide-title text-h4">
+                                        “We’ve been working with this team for over seven years, delivering several complex MMO projects together. During this time, they’ve consistently proven their ability to solve problems that even large studios struggle with. While we haven’t yet used their new platform directly, I’ve seen how their approaches to architecture and real-time world synchronization have evolved.”
+                                    </h4>
+                                    <h2 class="testimonials__carousel-slide-subtitle text-h2-static">
+                                        8x
+                                    </h2>
+                                    <p class="testimonials__carousel-slide-description">
+                                        increase in data processing effciency
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonials__carousel-controls">
+                        <button class="testimonials__carousel-button carousel__button--prev">
+                            <img class="testimonials__carousel-button-icon" src="assets/icons/arrow.svg" alt="arrow">
+                        </button>
+
+                        <div class="testimonials__carousel-pagination carousel__pagination"></div>
+
+                        <button class="testimonials__carousel-button carousel__button--next">
+                            <img class="testimonials__carousel-button-icon" src="assets/icons/arrow.svg" alt="arrow">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tech">
+            <div class="tech__container container">
+                <div class="tech__info">
+                    <div class="tech__badge badge">
+                        Tech Documentation
+                    </div>
+                    <h2 class="tech__title text-h2">
+                        The definitive source for Technical questions
+                    </h2>
+                    <p class="tech__description">
+                        We’ve moved past simple FAQs to provide comprehensive guides. Dive deep into architecture diagrams, specific implementation patterns, and real-world code examples.
+                    </p>
+                </div>
+                <button class="tech__btn btn btn--secondary btn--small">
+                    <span class="btn__label">Explore Technical Docs</span>
+                </button>
+                <div class="tech__picture-box">
+                    <picture class="tech__picture">
+                        <source srcset="assets/images/tech-guide-book.webp" media="(min-width: 1600px)" />
+                        <img class="tech__picture-image" src="assets/images/tech-guide-book.webp" alt="tech-guide" />
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <section class="contact-us">
+            <div class="contact-us__container container">
+                <h2 class="contact-us__title text-large">
+                    Let us integrate PlayServ into your project, free of charge
+                </h2>
+                <h3 class="contact-us__subtitle text-h3">
+                    This saves you up to $100K!
+                </h3>
+                <p class="contact-us__description">
+                    We are ready to integrate cool projects for free and support them all the way to launch!
+                    <br/>
+                    By PlayServ experts and fully at our expense. Because we believe in great ideas.
+                </p>
+                <button class="contact-us__btn btn btn--primary btn--large">
+                    <span class="btn__label">Book call with CEO</span>
+                </button>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__container container">
+                <div class="footer__top">
+                    <div class="footer__brand">
+                        <a href="/" class="logo logo--big footer__logo">
+                            <img class="logo__image" src="assets/icons/big-logo.svg" alt="PlayServ Big Logo">
+                        </a>
+                        <p class="footer__description">
+                            We turn complex backend work into a plug-and-play experience — one platform for networking, live ops, and scaling. Teams ship games in days, not months, and focus on what they love most: building worlds, not managing servers.
+                        </p>
+                    </div>
+                    <div class="footer__newsletter">
+                        <h3 class="footer__title">Newsletter</h3>
+                        <p class="footer__description">Subscribe for exclusive updates, product news, and early access to Playserv features.</p>
+                        <form class="form footer__subscribe" action="#" method="post" novalidate>
+                            <input
+                                    type="email"
+                                    id="newsletter-email"
+                                    name="email"
+                                    class="form__input"
+                                    placeholder="Your email"
+                                    autocomplete="email"
+                                    required
+                            />
+                            <button type="submit" class="btn btn--dark btn--small form__btn">
+                                <span class="btn__label">Subscribe</span>
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <ul class="socials">
+                        <li class="socials__item">
+                            <a href="/" class="socials__link">
+                                <img class="socials__icon" src="assets/icons/youtube.svg" alt="youtube">
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a href="/" class="socials__link">
+                                <img class="socials__icon" src="assets/icons/facebook.svg" alt="facebook">
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a href="/" class="socials__link">
+                                <img class="socials__icon" src="assets/icons/linkedin.svg" alt="linkedin">
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a href="/" class="socials__link">
+                                <img class="socials__icon" src="assets/icons/instagram.svg" alt="instagram">
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a href="/" class="socials__link">
+                                <img class="socials__icon" src="assets/icons/tik-tok.svg" alt="tik-tok">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer__legal">
+                        <p class="footer__copyright">2026 © Playserv | All Rights Reserved</p>
+                        <div class="links">
+                            <a href="/privacy-policy" class="links__item">Privacy Policy</a>
+                            <a href="/terms-conditions" class="links__item">Terms of Use</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

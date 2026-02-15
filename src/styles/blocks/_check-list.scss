@@ -1,0 +1,21 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.check-list {
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(20);
+}
+
+.check-list__item {
+  display: flex;
+  align-items: center;
+  gap: px-to-rem(10);
+}
+
+.check-list__icon {
+  height: px-to-rem(28);
+  width: px-to-rem(28);
+}
+
+.check-list__info {}

@@ -1,0 +1,43 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.form {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.form__input {
+  background: get-color($surfaces, secondary-lighter);
+  border: px-to-rem(1) solid get-color($strokes, secondary-lighter);
+  border-radius: radius(lg);
+  color: get-color($text-colors, primary);
+  padding: px-to-rem(15) px-to-rem(120) px-to-rem(15) px-to-rem(29);
+  width: 100%;
+  transition: 0.3s;
+  @include font-style(bodySmall);
+
+  &::placeholder {
+    color: get-color($text-colors, gray-lighter);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    border: px-to-rem(1) solid get-color($strokes, quaternary);
+  }
+}
+
+.form__btn {
+  font-weight: 400;
+  position: absolute;
+  right: px-to-rem(4);
+  padding-top: px-to-rem(11);
+  padding-bottom: px-to-rem(11);
+  box-shadow:
+    0 5px 11px 0 #00000033,
+    0 20px 20px 0 #0000002B,
+    0 46px 27px 0 #0000001A,
+    0 81px 32px 0 #00000008,
+    0 127px 35px 0 #00000000;
+}

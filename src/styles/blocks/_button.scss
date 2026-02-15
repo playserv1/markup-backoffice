@@ -1,0 +1,188 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: px-to-rem(12);
+
+  white-space: nowrap;
+
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+
+  @include font-style(actionLarge);
+}
+
+.btn--large {
+  font-weight: 600;
+  padding: px-to-rem(18);
+}
+
+.btn--small {
+  font-weight: 600;
+  padding: px-to-rem(15) px-to-rem(23) px-to-rem(15) px-to-rem(23);
+  @include font-style(actionSmall);
+
+  @include respond(lg) {
+    padding: px-to-rem(9) px-to-rem(23) px-to-rem(9) px-to-rem(23);
+  }
+}
+
+.btn--primary {
+  background: get-color($surface-gradients, dark);
+  color: get-color($text-colors, primary);
+  border-radius: radius(lg);
+  box-shadow:
+    0 px-to-rem(5) px-to-rem(11) 0 rgba(0, 0, 0, 0.2),
+    0 px-to-rem(20) px-to-rem(20) 0 rgba(0, 0, 0, 0.17),
+    0 px-to-rem(46) px-to-rem(27) 0 rgba(0, 0, 0, 0.1),
+    0 px-to-rem(81) px-to-rem(32) 0 rgba(0, 0, 0, 0.03),
+    0 px-to-rem(127) px-to-rem(35) 0 rgba(0, 0, 0, 0);
+  min-width: px-to-rem(312);
+  justify-content: center;
+  margin: px-to-rem(4);
+
+  &:before,
+  &:after {
+    content: '';
+    inset: px-to-rem(-4);
+    position: absolute;
+    z-index: -3;
+  }
+
+  &:before {
+    background: url('/assets/images/primary-btn-gradient.webp') no-repeat center / auto;
+    filter: blur(15px);
+    border-radius: radius(xl);
+  }
+
+  &:after {
+    background: url('/assets/images/primary-btn-image.webp') no-repeat center / cover;
+    border-radius: radius(xl);
+  }
+
+  &[disabled] {
+    pointer-events: none;
+
+    &:before {
+      content: none;
+    }
+
+    &:after {
+      background: url('/assets/images/primary-btn-disabled.webp') no-repeat center / cover;
+    }
+
+    .btn__icon-wrapper {
+      &:before {
+        border: px-to-rem(1) solid get-color($strokes, secondary);
+      }
+    }
+
+    .btn__label {
+      opacity: 0.32;
+    }
+  }
+
+  .btn__icon-wrapper {
+    background: get-color($surface-gradients, dark-gray);
+    border-radius: radius(lg);
+    box-shadow:
+      0 px-to-rem(81) px-to-rem(32) rgba(0, 0, 0, 0.03),
+      0 px-to-rem(46) px-to-rem(27) rgba(0, 0, 0, 0.1),
+      0 px-to-rem(20) px-to-rem(20) rgba(0, 0, 0, 0.17),
+      0 px-to-rem(5) px-to-rem(11) rgba(0, 0, 0, 0.2);
+    height: px-to-rem(36);
+    padding: px-to-rem(8);
+    width: px-to-rem(36);
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: px-to-rem(-1);
+      background: get-color($strokes, secondary);
+      border-radius: radius(xl);
+      z-index: -1;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      background: get-color($surface-gradients, dark);
+      inset: px-to-rem(-1);
+      border-radius: radius(xl);
+      z-index: -2;
+    }
+  }
+
+  .btn__icon {
+    transform: rotate(180deg);
+  }
+}
+
+.btn--secondary {
+  background: get-color($surface-gradients, light);
+  border: px-to-rem(1) solid get-color($strokes, quaternary);
+  border-radius: radius(xl);
+  box-shadow: 0 px-to-rem(4) px-to-rem(8) px-to-rem(-4) rgba(10, 20, 28, 0.08);
+  color: get-color($text-colors, tertiary);
+
+  &:hover {
+    background: get-color($surface-gradients, light-accent);
+  }
+}
+
+.btn--dark {
+  background: get-color($surface-gradients, dark);
+  border: px-to-rem(1) solid get-color($strokes, primary);
+  border-radius: radius(xl);
+  box-shadow: 0 px-to-rem(4) px-to-rem(8) px-to-rem(-4) rgba(10, 20, 28, 0.08);
+  color: get-color($text-colors, primary);
+
+  &:hover {
+    background: get-color($surface-gradients, dark-accent);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: get-color($surface-gradients, dark);
+    border-radius: radius(xl);
+  }
+
+  &[disabled] {
+    pointer-events: none;
+  }
+}
+
+.btn--gray {
+  background: get-color($surfaces, secondary-lighter);
+  border: px-to-rem(1) solid get-color($strokes, secondary-lighter);
+  backdrop-filter: blur(30px);
+  border-radius: radius(md);
+  color: get-color($text-colors, primary);
+
+  &:hover {
+    background: get-color($surfaces, secondary);
+  }
+}
+
+.btn--loading {
+  .btn__icon {
+    animation: spin 1s infinite ease-in-out;
+  }
+}
+
+.btn__label {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+

@@ -1,0 +1,49 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.flow {
+  padding-top: px-to-rem(40);
+  padding-bottom: px-to-rem(80);
+
+  @include respond(lg) {
+    padding-bottom: px-to-rem(120);
+  }
+}
+
+.flow__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(40);
+}
+
+.flow__cards {
+  max-width: px-to-rem(560);
+
+  @include respond(lg) {
+    max-width: initial;
+  }
+}
+
+.flow__info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(10);
+  max-width: px-to-rem(944);
+  text-align: center;
+}
+
+.flow__description {
+  margin-top: px-to-rem(10);
+}
+
+.flow__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: px-to-rem(32);
+
+  @include respond(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

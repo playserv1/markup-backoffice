@@ -1,0 +1,45 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.person-card {
+  border-radius: radius(sm-l);
+  overflow: hidden;
+  position: relative;
+}
+
+.person-card__picture {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.person-card__info {
+  background: get-color($backgrounds, gray-dark);
+  backdrop-filter: blur(20px);
+  border-radius: radius(tiny);
+  bottom: px-to-rem(8);
+  left: px-to-rem(8);
+  right: px-to-rem(8);
+  padding: px-to-rem(16);
+  position: absolute;
+}
+
+.person-card__info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.person-card__title {
+  font-weight: 600;
+  @include font-style(bodySmall);
+}
+
+.person-card__social-type {
+  @include font-style(bodySmall);
+}
+
+.person-card__description {
+  opacity: 0.6;
+  @include font-style(subtitle);
+}

@@ -1,0 +1,50 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  width: px-to-rem(20);
+  height: px-to-rem(20);
+  cursor: pointer;
+
+  &::before {
+    background: url('/assets/icons/info-circle.svg') no-repeat center;
+    content: '';
+    width: px-to-rem(20);
+    height: px-to-rem(20);
+    display: flex;
+  }
+
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+
+    padding: px-to-rem(8) px-to-rem(12);
+    width: max-content;
+    max-width: px-to-rem(220);
+    color: get-color($text-colors, primary);
+    background: get-color($backgrounds, dark);
+    border-radius: radius(tiny);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    white-space: normal;
+    z-index: 10;
+    @include font-style(subtitle);
+  }
+
+  &:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.tooltip--secondary {
+  &::before {
+    background: url('/assets/icons/info-circle-secondary.svg') no-repeat center;
+  }
+}

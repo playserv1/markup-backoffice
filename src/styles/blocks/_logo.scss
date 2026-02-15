@@ -1,0 +1,29 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.logo {
+  display: inline-block;
+}
+
+.logo--small {
+  .logo__image {
+    height: px-to-rem(40);
+    width: px-to-rem(40);
+
+    @include respond(lg) {
+      height: px-to-rem(36);
+      width: px-to-rem(36);
+    }
+  }
+}
+
+.logo--big {
+  .logo__image {
+    height: px-to-rem(40);
+    width: px-to-rem(240);
+  }
+}
+
+.logo__image {
+  display: block;
+}

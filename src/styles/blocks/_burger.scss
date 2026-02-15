@@ -1,0 +1,73 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.burger {
+  background: get-color($surface-gradients, dark);
+  border: px-to-rem(1) solid get-color($strokes, primary);
+  border-radius: radius(xs);
+  box-shadow:
+    0 px-to-rem(5) px-to-rem(11) 0 rgba(0, 0, 0, 0.2),
+    0 px-to-rem(20) px-to-rem(20) 0 rgba(0, 0, 0, 0.17),
+    0 px-to-rem(46) px-to-rem(27) 0 rgba(0, 0, 0, 0.1),
+    0 px-to-rem(81) px-to-rem(32) 0 rgba(0, 0, 0, 0.03),
+    0 px-to-rem(127) px-to-rem(35) 0 rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: px-to-rem(50);
+  width: px-to-rem(50);
+
+  &:before {
+    background: get-color($surface-gradients, gray);
+    border-radius: radius(sm);
+    content: '';
+    position: absolute;
+    inset: px-to-rem(-3);
+    z-index: -1;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: get-color($surface-gradients, dark);
+    border-radius: radius(xs);
+  }
+}
+
+.burger--active {
+  .burger__line {
+    &:nth-child(1) {
+      margin-bottom: 0;
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      display: none;
+    }
+
+    &:nth-child(3) {
+      margin-top: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.burger__line {
+  background: get-color($icon-colors, secondary);
+  border-radius: radius(xl);
+  position: absolute;
+  height: px-to-rem(1.5);
+  transition: 0.3s;
+  width: px-to-rem(18);
+
+  &:nth-child(1) {
+    margin-bottom: px-to-rem(10);
+  }
+
+  &:nth-child(3) {
+    margin-top: px-to-rem(10);
+  }
+}

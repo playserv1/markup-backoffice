@@ -1,0 +1,50 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.contact-us {
+  padding: px-to-rem(80) 0;
+  position: relative;
+
+  @include respond(lg) {
+    margin: px-to-rem(10);
+    padding: px-to-rem(104) 0;
+  }
+
+  &:before {
+    background: url('/assets/images/contact-us-background.webp') no-repeat top / 320%;
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.6;
+    z-index: -3;
+
+    @include respond(md) {
+      background-size: 160%;
+      background-position: top;
+    }
+
+    @include respond(lg) {
+      background-position: center;
+      background-size: cover;
+      border: px-to-rem(1) solid get-color($strokes, primary);
+      border-radius: radius(lg-l);
+      opacity: 1;
+    }
+  }
+}
+
+.contact-us__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: px-to-rem(20);
+}
+
+.contact-us__title {
+  max-width: px-to-rem(944);
+}
+
+.contact-us__btn {
+  margin-top: px-to-rem(24);
+}

@@ -1,0 +1,19 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.badge {
+  background: get-color($surface-gradients, dark);
+  border: px-to-rem(1) solid get-color($strokes, primary);
+  border-radius: radius(lg);
+  box-shadow:
+    0 px-to-rem(81) px-to-rem(32) rgba(0, 0, 0, 0.03),
+    0 px-to-rem(46) px-to-rem(27) rgba(0, 0, 0, 0.1),
+    0 px-to-rem(20) px-to-rem(20) rgba(0, 0, 0, 0.17),
+    0 px-to-rem(5) px-to-rem(11) rgba(0, 0, 0, 0.2);
+  color: get-color($text-colors, quaternary);
+  font-family: $font-ibm-plex-mono;
+  letter-spacing: 0.09em;
+  padding: px-to-rem(7) px-to-rem(15);
+  position: relative;
+  @include font-style(subtitle);
+}
