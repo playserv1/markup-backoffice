@@ -20,8 +20,6 @@
   margin-bottom: px-to-rem(32);
 }
 
-.calculator__tooltip {}
-
 .calculator__cards-wrapper {
   display: flex;
   flex-direction: column;
@@ -31,8 +29,6 @@
   border-top: px-to-rem(1) solid get-color($strokes, primary);
   margin: px-to-rem(16) 0;
 }
-
-.calculator__subtitle {}
 
 .calculator__span {
   color: get-color($text-colors, gray);
