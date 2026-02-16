@@ -2,7 +2,12 @@
 @use "../abstracts" as *;
 
 .cost {
-  padding: px-to-rem(90) 0 px-to-rem(121);
+  overflow: hidden;
+  padding: px-to-rem(80) 0;
+
+  @include respond(lg) {
+    padding: px-to-rem(90) 0 px-to-rem(121);
+  }
 }
 
 .cost__container {
@@ -13,7 +18,14 @@
 }
 
 .cost__content {
+  margin-top: px-to-rem(10);
+  max-width: px-to-rem(560);
   width: 100%;
+
+  @include respond(lg) {
+    margin-top: px-to-rem(26);
+    max-width: initial;
+  }
 }
 
 .cost__banner {
@@ -24,14 +36,25 @@
   flex-direction: column;
   gap: px-to-rem(4);
   text-align: center;
-  max-width: px-to-rem(944);
+  max-width: px-to-rem(560);
   width: 100%;
+  margin-bottom: px-to-rem(40);
+
+  @include respond(lg) {
+    margin-bottom: 0;
+    max-width: px-to-rem(944);
+  }
 }
 
 .cost__banner-title {
   font-weight: 600;
-  font-size: px-to-rem(32);
-  line-height: px-to-rem(40);
+  font-size: px-to-rem(28);
+  line-height: px-to-rem(32);
+
+  @include respond(lg) {
+    font-size: px-to-rem(32);
+    line-height: px-to-rem(40);
+  }
 }
 
 .cost__info {

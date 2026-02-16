@@ -19,8 +19,8 @@ export function initRange() {
           to right,
           #ff00cc 0%,
           #ff6a00 ${percent}%,
-          #1a1a1a ${percent}%,
-          #1a1a1a 100%
+          rgb(17 17 17) ${percent}%,
+          rgb(17 17 17) 100%
         )
       `
         }

@@ -2,9 +2,20 @@
 @use "../abstracts" as *;
 
 .range {
-  align-items: flex-end;
-  display: flex;
-  gap: px-to-rem(28);
+  align-items: center;
+  display: grid;
+  grid-template-areas:
+  'title value'
+  'body body';
+  grid-template-columns: 1fr minmax(px-to-rem(100), max-content);
+  gap: px-to-rem(20) px-to-rem(28);
+
+  @include respond(md) {
+    align-items: flex-end;
+    grid-template-areas:
+    'title value'
+    'body value';
+  }
 }
 
 .range__top {
@@ -21,6 +32,13 @@
   gap: px-to-rem(14);
   width: 100%;
   padding-bottom: px-to-rem(7);
+  grid-area: body;
+}
+
+.range__title {
+  color: get-color($text-colors, gray);
+  grid-area: title;
+  @include font-style(subtitleLarge);
 }
 
 .range__input {
@@ -51,12 +69,12 @@
 }
 
 .range__value {
-  min-width: px-to-rem(100);
   text-align: center;
   padding: px-to-rem(10) px-to-rem(16);
   background: get-color($surfaces, secondary-lighter);
   border: px-to-rem(1) solid get-color($strokes, secondary-lighter);
   border-radius: radius(lg-s);
   height: px-to-rem(40);
+  grid-area: value;
   @include font-style(subtitleLarge);
 }
