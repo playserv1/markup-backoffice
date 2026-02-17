@@ -45,6 +45,10 @@
   justify-content: center;
   margin: px-to-rem(4);
 
+  &:hover {
+    background: get-color($surface-gradients, dark-gray);
+  }
+
   &:before,
   &:after {
     content: '';

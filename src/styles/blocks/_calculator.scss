@@ -76,7 +76,7 @@
   &:after {
     content: '';
     position: absolute;
-    inset: px-to-rem(-80);
+    inset: px-to-rem(-48);
     z-index: -2;
     background: url('/assets/images/calculator-estimate-background.webp') no-repeat center;
 
