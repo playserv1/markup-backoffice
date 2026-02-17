@@ -1,6 +1,8 @@
 @use '../abstracts' as *;
 
 .container {
+  display: flex;
+  flex-direction: column;
   max-width: 100%;
   margin: 0 auto;
   padding: 0 px-to-rem(20);

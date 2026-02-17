@@ -3,15 +3,29 @@
 
 .tabs {
   display: flex;
-  gap: px-to-rem(24);
+  gap: px-to-rem(16);
+  justify-content: center;
+  max-width: px-to-rem(360);
+  width: 100%;
+
+  @include respond(md) {
+    gap: px-to-rem(24);
+    max-width: initial;
+  }
 }
 
 .tabs__btn {
   background: radial-gradient(11.76% 31.15% at 4.21% 92.13%, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(15.92% 19.57% at 153.34% 90.16%, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(9.86% 21.2% at 154.07% 7.87%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(7.47% 22.77% at 4.03% 9.06%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(201.84deg, rgba(255, 255, 255, 0.08) 5.36%, rgba(255, 255, 255, 0) 64.68%), linear-gradient(7.43deg, rgba(0, 0, 0, 0.12) 8.3%, rgba(0, 0, 0, 0) 19.83%), #18151C;
   border-radius: radius(xs);
   color: get-color($text-colors, primary);
-  padding: px-to-rem(22) px-to-rem(32);
+  padding: px-to-rem(22) px-to-rem(10);
   position: relative;
+  width: 100%;
+
+  @include respond(md) {
+    padding: px-to-rem(22) px-to-rem(32);
+    width: initial;
+  }
 
   &:before {
     content: '';

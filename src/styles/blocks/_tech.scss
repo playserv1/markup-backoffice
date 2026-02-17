@@ -15,30 +15,30 @@
     padding-bottom: px-to-rem(21);
     padding-top: px-to-rem(17);
   }
-}
 
-.tech__container {
-  justify-items: center;
-  display: grid;
-  justify-content: center;
-  grid-template-areas:
+  .tech__container {
+    justify-items: center;
+    display: grid;
+    justify-content: center;
+    grid-template-areas:
     'info'
     'picture'
     'button';
 
-  @include respond(md) {
-    grid-template-areas:
+    @include respond(md) {
+      grid-template-areas:
     'info'
     'button'
     'picture';
-  }
+    }
 
-  @include respond(lg) {
-    justify-items: flex-start;
-    gap: px-to-rem(30) px-to-rem(2);
-    grid-template-areas:
+    @include respond(lg) {
+      justify-items: flex-start;
+      gap: px-to-rem(30) px-to-rem(2);
+      grid-template-areas:
     'info picture'
     'button picture';
+    }
   }
 }
 

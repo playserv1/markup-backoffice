@@ -41,8 +41,6 @@
 
 .hero__container {
   align-items: center;
-  display: flex;
-  flex-direction: column;
   gap: px-to-rem(42);
 
   @include respond(md) {
