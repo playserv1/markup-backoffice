@@ -9,37 +9,18 @@
   cursor: pointer;
 
   &::before {
-    background: url('/assets/icons/info-circle.svg') no-repeat center;
     content: '';
     width: px-to-rem(20);
     height: px-to-rem(20);
-    display: flex;
+    display: block;
+    background: url('/assets/icons/info-circle.svg') no-repeat center;
   }
 
-  &::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: calc(100% + 8px);
-    left: 50%;
-    transform: translateX(-50%) translateY(6px);
-
-    padding: px-to-rem(8) px-to-rem(12);
-    width: max-content;
-    max-width: px-to-rem(220);
-    color: get-color($text-colors, primary);
-    background: get-color($backgrounds, dark);
-    border-radius: radius(tiny);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.2s ease;
-    white-space: normal;
-    z-index: 10;
-    @include font-style(subtitle);
-  }
-
-  &:hover::after {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
+  &:hover {
+    .tooltip__content {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
   }
 }
 
@@ -47,4 +28,52 @@
   &::before {
     background: url('/assets/icons/info-circle-secondary.svg') no-repeat center;
   }
+}
+
+.tooltip__content {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  width: max-content;
+  max-width: px-to-rem(320);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  z-index: 10;
+  padding: px-to-rem(16);
+  background: get-color($surfaces, secondary);
+  border: px-to-rem(1) solid get-color($strokes, secondary);
+  border-radius: radius(tiny);
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(4);
+
+  &:before {
+    content: '';
+    background: get-color($surfaces, secondary);
+    border-bottom: px-to-rem(1) solid get-color($strokes, secondary);
+    border-right: px-to-rem(1) solid get-color($strokes, secondary);
+    height: px-to-rem(12);
+    width: px-to-rem(12);
+    position: absolute;
+    bottom: px-to-rem(-6.5);
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+}
+
+.tooltip__title {
+  display: block;
+  margin-bottom: px-to-rem(4);
+  color: get-color($text-colors, primary);
+  font-weight: 500;
+  @include font-style(subtitleLarge);
+}
+
+.tooltip__text {
+  font-weight: 400;
+  display: block;
+  color: get-color($text-colors, gray);
+  @include font-style(subtitle);
 }

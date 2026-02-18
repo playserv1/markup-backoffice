@@ -1,0 +1,13 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(8);
+}
+
+.form-field__label {
+  color: get-color($text-colors, gray);
+  @include font-style(subtitleLarge);
+}

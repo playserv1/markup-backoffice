@@ -2,19 +2,29 @@
 @use "../abstracts" as *;
 
 .range {
+  &:not(.range--grid) {
+    align-items: center;
+    display: flex;
+    gap: px-to-rem(12);
+  }
+}
+
+.range--grid {
   align-items: center;
   display: grid;
   grid-template-areas:
   'title value'
   'body body';
-  grid-template-columns: 1fr minmax(px-to-rem(100), max-content);
-  gap: px-to-rem(20) px-to-rem(28);
+  grid-template-columns: 1fr minmax(px-to-rem(74), max-content);
+  gap: px-to-rem(8);
 
   @include respond(md) {
     align-items: flex-end;
     grid-template-areas:
     'title value'
     'body value';
+    grid-template-columns: 1fr minmax(px-to-rem(100), max-content);
+    gap: px-to-rem(20) px-to-rem(28);
   }
 }
 

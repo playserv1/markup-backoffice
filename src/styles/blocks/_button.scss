@@ -6,9 +6,7 @@
   align-items: center;
   justify-content: center;
   gap: px-to-rem(12);
-
   white-space: nowrap;
-
   cursor: pointer;
   position: relative;
   transition: 0.3s;
@@ -46,7 +44,10 @@
   margin: px-to-rem(4);
 
   &:hover {
-    background: get-color($surface-gradients, dark-gray);
+    &:before,
+    &:after {
+      animation: conveyor 5s infinite;
+    }
   }
 
   &:before,
@@ -55,6 +56,7 @@
     inset: px-to-rem(-4);
     position: absolute;
     z-index: -3;
+    transition: 0.3s;
   }
 
   &:before {
@@ -64,7 +66,7 @@
   }
 
   &:after {
-    background: url('/assets/images/primary-btn-image.webp') no-repeat center / cover;
+    background: url('/assets/images/primary-btn-image.webp') no-repeat center / auto;
     border-radius: radius(xl);
   }
 
@@ -190,3 +192,14 @@
   to { transform: rotate(360deg); }
 }
 
+@keyframes conveyor {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}

@@ -1,0 +1,77 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+}
+
+.modal--is-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: get-color($backgrounds, dark-opacity);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+
+.modal__content {
+  position: relative;
+  width: 90%;
+  max-width: px-to-rem(900px);
+  background: get-color($backgrounds, dark);
+  border-radius: radius(sm-l);
+  overflow: hidden;
+  z-index: 2;
+  animation: modalFadeIn 0.3s ease;
+}
+
+.modal__video-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.modal__iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal__close {
+  position: absolute;
+  top: px-to-rem(16);
+  right: px-to-rem(16);
+  z-index: 3;
+  background: get-color($backgrounds, secondary);
+  border: none;
+  color: get-color($text-colors, primary);
+  font-size: px-to-rem(18);
+  width: px-to-rem(36);
+  height: px-to-rem(36);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background: get-color($backgrounds, secondary-light);
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

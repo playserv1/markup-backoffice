@@ -35,6 +35,10 @@
 @use "blocks/calculator";
 @use "blocks/card-checkbox";
 @use "blocks/range";
+@use "blocks/stepper";
+@use "blocks/select";
+@use "blocks/form-field";
+@use "blocks/modal";
 
 //layout
 @use "layout/container.scss";

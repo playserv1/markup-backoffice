@@ -41,6 +41,11 @@
   height: 100%;
 }
 
+.card-checkbox__icon {
+  height: px-to-rem(20);
+  width: px-to-rem(20);
+}
+
 .card-checkbox__title {
   font-weight: 500;
   @include font-style(subtitleLarge);

@@ -1,0 +1,233 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.stepper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: px-to-rem(80);
+
+  @include respond(md) {
+    gap: px-to-rem(24);
+    padding-top: 0;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    border-radius: radius(sm-l);
+    background: get-color($backgrounds, secondary);
+    border: px-to-rem(1) solid get-color($strokes, primary);
+    height: px-to-rem(4);
+    top: px-to-rem(28);
+
+    @include respond(md) {
+      content: none;
+    }
+  }
+
+  &:before {
+    left: px-to-rem(70);
+    right: calc(50% + 46px);
+  }
+
+  &:after {
+    left: calc(50% + 46px);
+    right: px-to-rem(70);
+  }
+}
+
+.stepper__row {
+  align-items: center;
+  display: flex;
+  gap: px-to-rem(16);
+
+  @include respond(md) {
+    position: relative;
+  }
+
+  &:nth-child(1) {
+    .stepper__item {
+      left: 0;
+    }
+  }
+
+  &:nth-child(2) {
+    .stepper__item {
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include respond(md) {
+        transform: none;
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    .stepper__item {
+      right: 0;
+
+      &:before {
+        content: none;
+      }
+    }
+  }
+}
+
+.stepper__item {
+  margin-bottom: auto;
+  padding: px-to-rem(7) 0;
+  position: absolute;
+  top: 0;
+
+  @include respond(md) {
+    padding: 0 px-to-rem(10);
+    position: initial;
+    top: initial;
+  }
+
+  &:before {
+    position: absolute;
+    left: px-to-rem(38);
+    top: px-to-rem(84);
+    bottom: 0;
+    width: px-to-rem(4);
+    border-radius: radius(sm-l);
+    background: get-color($backgrounds, secondary);
+    border: px-to-rem(1) solid get-color($strokes, primary);
+    opacity: 0;
+
+    @include respond(md) {
+      content: '';
+    }
+  }
+}
+
+.stepper__item--active {
+  &:before,
+  .stepper__item-circle:after {
+    opacity: 1;
+  }
+}
+
+.stepper__item-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: px-to-rem(46);
+  min-width: px-to-rem(46);
+  height: px-to-rem(46);
+  background: get-color($surface-gradients, dark);
+  border: px-to-rem(1) solid get-color($strokes, primary);
+  border-radius: radius(lg);
+  position: relative;
+
+  @include respond(md) {
+    width: px-to-rem(60);
+    min-width: px-to-rem(60);
+    height: px-to-rem(60);
+  }
+
+  &:after {
+    content: '';
+    border-radius: radius(lg);
+    position: absolute;
+    inset: px-to-rem(-4);
+    background: linear-gradient(180deg, #F63D33 0%, #B93351 100%);
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+.stepper__item-icon {
+  height: px-to-rem(20);
+  width: px-to-rem(20);
+
+  @include respond(md) {
+    height: px-to-rem(24);
+    width: px-to-rem(24);
+  }
+}
+
+.stepper__step {
+  display: none;
+  width: 100%;
+
+  @include respond(md) {
+    display: block;
+  }
+
+  &.stepper__step--active {
+    display: block;
+
+    .stepper__hidden-content {
+      display: flex;
+    }
+
+    .stepper__step-number {
+      color: map.get($primitives, orange);
+    }
+  }
+}
+
+.stepper__hidden-content {
+  display: none;
+  flex-direction: column;
+  gap: px-to-rem(4);
+}
+
+.stepper__step-name {
+  display: flex;
+  align-items: center;
+  gap: px-to-rem(4);
+}
+
+.stepper__step-number {
+  color: get-color($text-colors, quaternary);
+  font-family: $font-ibm-plex-mono;
+  margin-bottom: px-to-rem(4);
+  @include font-style(subtitle);
+}
+
+.stepper__step-description {
+  color: get-color($text-colors, gray);
+  @include font-style(subtitle);
+}
+
+.stepper__step-cards {
+  gap: px-to-rem(8);
+  margin-top: px-to-rem(4);
+}
+
+.stepper__range {
+  &.stepper__range--mt-xs {
+    margin-top: px-to-rem(4);
+  }
+
+  &.stepper__range--mt-sm {
+    margin-top: px-to-rem(8);
+  }
+
+  &.stepper__range--mt-lg {
+    margin-top: px-to-rem(24);
+  }
+}
+
+.stepper__span {
+  color: get-color($text-colors, gray);
+  align-items: center;
+  display: flex;
+  gap: px-to-rem(4);
+  @include font-style(subtitleLarge);
+}
+
+.stepper__done {
+  padding: px-to-rem(20) 0;
+  text-align: center;
+}
+
+.stepper__select {
+  margin: px-to-rem(12) 0;
+}
+

@@ -58,6 +58,7 @@ $primitives: (
   gray-400: #909296,
   gray-100: #E8F2F5,
 
+  orange: #EC7F48,
   accent-orange: #F15C11,
   accent-purple: #926FFF,
   card-hover-gradient: conic-gradient(from 107.26deg at 50% 50%, #FF9500 -35.09deg, #AF52DE 131.39deg, #FF3B30 279.88deg, #FF9500 324.91deg, #AF52DE 491.39deg),
@@ -90,6 +91,7 @@ $text-colors: (
   quinary: map.get($primitives, gray-700),
   gray: map.get($primitives, gray-400),
   gray-lighter: map.get($primitives, white-2),
+  accent-orange: map.get($primitives, accent-orange),
 );
 
 /* Strokes / Borders */

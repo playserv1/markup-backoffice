@@ -84,7 +84,7 @@
                         <source srcset="assets/images/hero-picture-big.png" media="(min-width: 1600px)" />
                         <img class="hero__picture-image" src="assets/images/hero-picture-small.png" alt="hero-picture" />
                     </picture>
-                    <button class="play-button hero__action">
+                    <button class="play-button hero__action" data-video-modal>
                         <span class="play-button__icon-box">
                             <img class="play-button__icon" src="assets/icons/play-arrow.svg" alt="play-arrow" />
                             <img class="play-button__author" src="assets/images/author.png" alt="author" />
@@ -651,9 +651,13 @@
                             <div class="calculator__actions">
                                 <h4 class="calculator__title text-h4">
                                     Enter your expected CCU
-                                    <span class="calculator__tooltip tooltip" data-tooltip="This is your tooltip text"></span>
+                                    <span class="calculator__tooltip tooltip tooltip--secondary">
+                                        <span class="tooltip__content">
+                                            <span class="tooltip__text">This is your tooltip text</span>
+                                        </span>
+                                    </span>
                                 </h4>
-                                <div class="calculator__range range" data-range>
+                                <div class="calculator__range range range--grid" data-range>
                                     <div class="range__title">
                                         Expected Average CCU
                                     </div>
@@ -715,7 +719,6 @@
                                                 name="ccu"
                                                 value="high"
                                                 class="card-checkbox__input"
-                                                checked
                                             />
                                             <span class="card-checkbox__card">
                                                 <span class="card-checkbox__title">
@@ -732,7 +735,6 @@
                                                 name="ccu"
                                                 value="high"
                                                 class="card-checkbox__input"
-                                                checked
                                             />
                                             <span class="card-checkbox__card">
                                                 <span class="card-checkbox__title">
@@ -747,15 +749,19 @@
                                 </div>
                                 <div class="calculator__span">
                                     Gameplay Intensity
-                                    <span class="calculator__tooltip tooltip tooltip--secondary" data-tooltip="This is your tooltip text"></span>
+                                    <span class="calculator__tooltip tooltip tooltip--secondary">
+                                        <span class="tooltip__content">
+                                            <span class="tooltip__text">This is your tooltip text</span>
+                                        </span>
+                                    </span>
                                 </div>
                                 <div class="calculator__card-checkbox card-checkbox card-checkbox--three-cols" role="radiogroup">
                                     <label class="card-checkbox__option">
                                         <input
-                                                type="radio"
-                                                name="card-checkbox"
-                                                value="light"
-                                                class="card-checkbox__input"
+                                            type="radio"
+                                            name="card-checkbox"
+                                            value="light"
+                                            class="card-checkbox__input"
                                         />
                                         <span class="card-checkbox__card">
                                         <span class="card-checkbox__title">Light</span>
@@ -764,10 +770,10 @@
                                     </label>
                                     <label class="card-checkbox__option">
                                         <input
-                                                type="radio"
-                                                name="card-checkbox"
-                                                value="medium"
-                                                class="card-checkbox__input"
+                                            type="radio"
+                                            name="card-checkbox"
+                                            value="medium"
+                                            class="card-checkbox__input"
                                         />
                                         <span class="card-checkbox__card">
                                         <span class="card-checkbox__title">Medium</span>
@@ -776,11 +782,10 @@
                                     </label>
                                     <label class="card-checkbox__option">
                                         <input
-                                                type="radio"
-                                                name="card-checkbox"
-                                                value="high"
-                                                class="card-checkbox__input"
-                                                checked
+                                            type="radio"
+                                            name="card-checkbox"
+                                            value="high"
+                                            class="card-checkbox__input"
                                         />
                                         <span class="card-checkbox__card">
                                         <span class="card-checkbox__title">High</span>
@@ -840,7 +845,291 @@
                         </div>
                     </div>
                     <div class="tabs__content" data-tab-content="auto">
-                        <p class="cost__hint">Auto estimation coming soon...</p>
+                        <div class="calculator">
+                            <div class="calculator__actions">
+                                <div class="stepper" data-stepper>
+                                    <div class="stepper__row">
+                                        <div class="stepper__item stepper__item--active" data-step="1">
+                                            <div class="stepper__item-circle">
+                                                <img class="stepper__item-icon" src="assets/icons/game.svg" alt="game">
+                                            </div>
+                                        </div>
+                                        <div class="stepper__step stepper__step--active" data-step="1">
+                                            <span class="stepper__step-number">Step 1</span>
+                                            <h5 class="stepper__step-name text-h5">Pick your game type</h5>
+                                            <div class="stepper__hidden-content">
+                                                <p class="stepper__step-description">
+                                                    We’ll prefill typical session settings for this type. You can tweak them in the next steps.
+                                                </p>
+                                                <div class="stepper__step-cards card-checkbox card-checkbox--two-cols" role="radiogroup">
+                                                    <label class="card-checkbox__option">
+                                                        <input
+                                                            type="radio"
+                                                            name="game"
+                                                            value="light"
+                                                            class="card-checkbox__input"
+                                                        />
+                                                        <span class="card-checkbox__card">
+                                                            <img class="card-checkbox__icon" src="assets/icons/game.svg" alt="game">
+                                                            <span class="card-checkbox__title">
+                                                                Casual Puzzle / Idle
+                                                            </span>
+                                                            <span class="card-checkbox__desc">
+                                                                Short sessions, low overlap
+                                                            </span>
+                                                        </span>
+                                                    </label>
+                                                    <label class="card-checkbox__option">
+                                                        <input
+                                                            type="radio"
+                                                            name="game"
+                                                            value="medium"
+                                                            class="card-checkbox__input"
+                                                        />
+                                                        <span class="card-checkbox__card">
+                                                            <img class="card-checkbox__icon" src="assets/icons/bolt.svg" alt="bolt">
+                                                            <span class="card-checkbox__title">
+                                                                Co-op Survival / Builder
+                                                            </span>
+                                                            <span class="card-checkbox__desc">
+                                                                Longer co-op sessions, steady overlap.
+                                                            </span>
+                                                        </span>
+                                                    </label>
+                                                    <label class="card-checkbox__option">
+                                                        <input
+                                                            type="radio"
+                                                            name="game"
+                                                            value="high"
+                                                            class="card-checkbox__input"
+                                                        />
+                                                        <span class="card-checkbox__card">
+                                                            <img class="card-checkbox__icon" src="assets/icons/map-search.svg" alt="map-search">
+                                                            <span class="card-checkbox__title">
+                                                                Action / Dungeon Run
+                                                            </span>
+                                                            <span class="card-checkbox__desc">
+                                                                Burst sessions, higher concurrency
+                                                            </span>
+                                                        </span>
+                                                    </label>
+                                                    <label class="card-checkbox__option">
+                                                        <input
+                                                            type="radio"
+                                                            name="game"
+                                                            value="high"
+                                                            class="card-checkbox__input"
+                                                        />
+                                                        <span class="card-checkbox__card">
+                                                            <img class="card-checkbox__icon" src="assets/icons/party.svg" alt="party">
+                                                            <span class="card-checkbox__title">
+                                                                Party / Minigames
+                                                            </span>
+                                                            <span class="card-checkbox__desc">
+                                                                Spiky, event-driven traffic
+                                                            </span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="stepper__row">
+                                        <div class="stepper__item" data-step="2">
+                                            <div class="stepper__item-circle">
+                                                <img class="stepper__item-icon" src="assets/icons/success-list.svg" alt="success-list">
+                                            </div>
+                                        </div>
+                                        <div class="stepper__step" data-step="2">
+                                            <span class="stepper__step-number">Step 2</span>
+                                            <h5 class="stepper__step-name text-h5">
+                                                Set your MAU
+                                                <span class="tooltip tooltip--secondary">
+                                                    <span class="tooltip__content">
+                                                        <span class="tooltip__title">MAU (Monthly Active Users)</span>
+                                                        <span class="tooltip__text">is a metric used to measure the number of unique users who interact with a product or service over the course of a month.</span>
+                                                    </span>
+                                                </span>
+                                            </h5>
+                                            <div class="stepper__hidden-content">
+                                                <div class="stepper__range stepper__range--mt-lg range" data-range>
+                                                    <div class="range__body">
+                                                        <div class="range__top">
+                                                            <span class="range__min text-subtitle">100 MAU</span>
+                                                            <span class="range__max text-subtitle">100K+ MAU</span>
+                                                        </div>
+                                                        <input
+                                                            type="range"
+                                                            min="100"
+                                                            max="100000"
+                                                            value="35 000"
+                                                            class="range__input"
+                                                        />
+                                                    </div>
+                                                    <div class="range__value">35 000</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="stepper__row">
+                                        <div class="stepper__item" data-step="3">
+                                            <div class="stepper__item-circle">
+                                                <img class="stepper__item-icon" src="assets/icons/documents.svg" alt="documents">
+                                            </div>
+                                        </div>
+                                        <div class="stepper__step" data-step="3">
+                                            <span class="stepper__step-number">Step 3</span>
+                                            <h5 class="stepper__step-name text-h5">Adjust play session patterns</h5>
+                                            <div class="stepper__hidden-content">
+                                                <p class="stepper__step-description">
+                                                    Prefilled based on your game type. You can change them if needed.
+                                                </p>
+                                                <div class="stepper__range stepper__range--mt-xs range range--grid" data-range>
+                                                    <div class="range__title">
+                                                        Avg Session Length
+                                                    </div>
+                                                    <div class="range__body">
+                                                        <div class="range__top">
+                                                            <span class="range__min text-subtitle">3 min</span>
+                                                            <span class="range__max text-subtitle">90 min</span>
+                                                        </div>
+                                                        <input
+                                                            type="range"
+                                                            min="3"
+                                                            max="90"
+                                                            value="15"
+                                                            class="range__input"
+                                                        />
+                                                    </div>
+                                                    <div class="range__value">15</div>
+                                                </div>
+                                                <div class="stepper__select form-field">
+                                                    <label class="form-field__label" for="sessions-select">
+                                                        Sessions per player per day
+                                                    </label>
+
+                                                    <div class="select" data-select>
+                                                        <button
+                                                            class="select__trigger"
+                                                            type="button"
+                                                            id="sessions-select"
+                                                        >
+                                                            <span class="select__value">Select sessions</span>
+                                                            <span class="select__arrow"></span>
+                                                        </button>
+
+                                                        <div class="select__dropdown">
+                                                            <ul class="select__list">
+                                                                <li class="select__option" data-value="1">1 session</li>
+                                                                <li class="select__option" data-value="2">2 sessions</li>
+                                                                <li class="select__option" data-value="3">3 sessions</li>
+                                                                <li class="select__option" data-value="5">5 sessions</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="stepper__span">
+                                                    Gameplay Intensity
+                                                    <span class="tooltip tooltip--secondary">
+                                                        <span class="tooltip__content">
+                                                            <span class="tooltip__text">This is your tooltip text</span>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <div class="stepper__step-cards card-checkbox card-checkbox--three-cols" role="radiogroup">
+                                                    <label class="card-checkbox__option">
+                                                        <input
+                                                            type="radio"
+                                                            name="card-checkbox"
+                                                            value="light"
+                                                            class="card-checkbox__input"
+                                                        />
+                                                        <span class="card-checkbox__card">
+                                                            <span class="card-checkbox__title">Light</span>
+                                                            <span class="card-checkbox__desc">Casual / turn-based</span>
+                                                        </span>
+                                                    </label>
+                                                    <label class="card-checkbox__option">
+                                                        <input
+                                                            type="radio"
+                                                            name="card-checkbox"
+                                                            value="medium"
+                                                            class="card-checkbox__input"
+                                                        />
+                                                        <span class="card-checkbox__card">
+                                                            <span class="card-checkbox__title">Medium</span>
+                                                            <span class="card-checkbox__desc">Session co-op</span>
+                                                        </span>
+                                                    </label>
+                                                    <label class="card-checkbox__option">
+                                                        <input
+                                                            type="radio"
+                                                            name="card-checkbox"
+                                                            value="high"
+                                                            class="card-checkbox__input"
+                                                        />
+                                                        <span class="card-checkbox__card">
+                                                            <span class="card-checkbox__title">High</span>
+                                                            <span class="card-checkbox__desc">Fast-paced / always-on</span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="stepper__done text-subtitle-large" hidden>
+                                        ✅ Done! Your setup is complete
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="calculator__estimate">
+                                <h5 class="calculator__estimate-subtitle text-h5">Your Estimate</h5>
+                                <span class="calculator__estimate-title">$22</span>
+                                <span class="calculator__estimate-span">Estimated monthly cost</span>
+                                <div class="calculator__estimate-info">
+                                    <div class="calculator__estimate-row">
+                                        <div class="calculator__estimate-col">
+                                            Estimated average CCU:
+                                        </div>
+                                        <div class="calculator__estimate-col">
+                                            278 players
+                                        </div>
+                                    </div>
+                                    <div class="calculator__estimate-row">
+                                        <div class="calculator__estimate-col">
+                                            Estimated peak CCU:
+                                        </div>
+                                        <div class="calculator__estimate-col">
+                                            833 players
+                                        </div>
+                                    </div>
+                                    <div class="calculator__estimate-row">
+                                        <div class="calculator__estimate-col">
+                                            Price per CCU / month:
+                                        </div>
+                                        <div class="calculator__estimate-col">
+                                            $0.03
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calculator__estimate-banner">
+                                    <p class="calculator__estimate-banner-title">
+                                        100 CCU / month free for early adopters
+                                    </p>
+                                    <p class="calculator__estimate-banner-subtitle">
+                                        Spin up your first environment, plug in your game, and only pay when you grow beyond the free tier.
+                                    </p>
+                                </div>
+                                <div class="calculator__estimate-btn-wrapper">
+                                    <button class="calculator__estimate-btn btn btn--primary btn--large">
+                                        <span class="btn__label">Start for free</span>
+                                    </button>
+                                </div>
+                                <span class="calculator__estimate-description">
+                                    No credit card required. You can tweak limits or move to production pricing at any time
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1062,5 +1351,23 @@
             </div>
         </footer>
     </main>
+    <div class="modal" id="videoModal" aria-hidden="true">
+        <div class="modal__backdrop"></div>
+        <div class="modal__content" role="dialog" aria-modal="true">
+            <button class="modal__close" type="button" aria-label="Close modal">
+                ✕
+            </button>
+            <div class="modal__video-wrapper">
+                <iframe
+                    class="modal__iframe"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen
+                ></iframe>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
