@@ -130,8 +130,11 @@
 
 .tech__picture-image {
   object-fit: cover;
+  height: px-to-rem(448);
+  width: px-to-rem(370);
 
   @include respond(md) {
     height: px-to-rem(568);
+    width: px-to-rem(468);
   }
 }

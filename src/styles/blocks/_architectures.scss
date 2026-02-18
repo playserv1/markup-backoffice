@@ -4,6 +4,7 @@
 .architectures {
   border-top: px-to-rem(1) solid get-color($strokes, light);
   padding: px-to-rem(80) 0;
+  overflow: hidden;
 
   @include respond(lg) {
     border: none;
@@ -95,7 +96,7 @@
   }
 }
 
-.architectures__carousel-slider {
+.architectures__carousel .architectures__carousel-slider {
   @include respond(md) {
     pointer-events: none;
   }
@@ -158,7 +159,7 @@
   width: px-to-rem(16);
 }
 
-.architectures__card {
+.architectures__carousel-slider .architectures__card {
   background: get-color($surfaces, secondary);
   border: px-to-rem(1) solid get-color($strokes, primary);
   border-radius: radius(lg-s);

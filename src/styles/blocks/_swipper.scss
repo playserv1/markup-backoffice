@@ -1,0 +1,19 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.swiper {
+  &:not(.swiper-initialized) {
+    .swiper-wrapper {
+      overflow: hidden;
+    }
+  }
+}
+
+.swiper-wrapper {
+  display: flex;
+
+  .swiper-slide {
+    flex: 1 0 100%;
+    margin-right: px-to-rem(16);
+  }
+}

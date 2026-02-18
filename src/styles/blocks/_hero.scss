@@ -97,6 +97,8 @@
   border: px-to-rem(6) solid get-color($strokes, light);
   border-radius: radius(sm);
   object-fit: contain;
+  height: 100%;
+  width: 100%;
 
   @include respond(lg) {
     border: px-to-rem(10) solid get-color($strokes, light);

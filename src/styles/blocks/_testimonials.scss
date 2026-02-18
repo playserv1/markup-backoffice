@@ -89,7 +89,7 @@
   }
 }
 
-.testimonials__carousel-slider {
+.testimonials__carousel .testimonials__carousel-slider {
   margin-bottom: px-to-rem(30);
 
   @include respond(md) {

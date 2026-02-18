@@ -65,12 +65,12 @@
 }
 
 .play-button__icon {
-  height: px-to-rem(19);
+  height: px-to-rem(16);
   width: px-to-rem(16);
 
   @include respond(md) {
     height: px-to-rem(24);
-    width: px-to-rem(26);
+    width: px-to-rem(24);
   }
 }
 

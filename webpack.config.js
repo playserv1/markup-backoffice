@@ -27,6 +27,7 @@ module.exports = {
   mode: isDev ? 'development' : 'production',
   entry: {
     main: './scripts/index.js',
+    vendor: ['swiper'],
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -50,6 +51,7 @@ module.exports = {
   plugins: [
     new HTMLWebpackPlugin({
       template: './templates/index.html',
+      scriptLoading: 'defer',
       minify: {
         collapseWhitespace: isProd,
       },

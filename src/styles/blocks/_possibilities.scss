@@ -4,6 +4,7 @@
 .possibilities {
   padding: px-to-rem(80) 0;
   position: relative;
+  overflow: hidden;
 
   @include respond(lg) {
     margin: px-to-rem(10);
@@ -79,7 +80,7 @@
   }
 }
 
-.possibilities__carousel-slider {
+.possibilities__carousel .possibilities__carousel-slider {
   @include respond(md) {
     pointer-events: none;
   }
@@ -142,7 +143,7 @@
   width: px-to-rem(16);
 }
 
-.possibilities__card {
+.possibilities__carousel .possibilities__card {
   background: get-color($surfaces, secondary);
   border: px-to-rem(1) solid get-color($strokes, primary);
   border-radius: radius(lg-s);
@@ -242,4 +243,8 @@
 .possibilities__card-icon {
   height: px-to-rem(28);
   width: px-to-rem(28);
+}
+
+.possibilities__card-tree-item-name {
+  flex: 1;
 }

@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="All you were missing to make games. Deploy worldwide in a snap. Build, customize and scale multiplayer games with a single SDK, fully customizable server logic and automatic worldwide deployment — without writing network code or managing servers.">
     <title>Play Serv</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
 </head>
 <body>
     <main>
         <header class="header">
             <a href="/" class="logo logo--small header__logo">
-                <img class="logo__image" src="assets/icons/logo.svg" alt="PlayServ Logo">
+                <img
+                    class="logo__image" s
+                    src="assets/icons/logo.svg"
+                    alt="PlayServ Logo"
+                    height="36"
+                    width="36"
+                >
             </a>
             <div class="header__controls">
                 <nav class="nav header__nav">
@@ -82,12 +90,33 @@
                 <div class="hero__action-wrapper">
                     <picture class="hero__picture">
                         <source srcset="assets/images/hero-picture-big.png" media="(min-width: 1600px)" />
-                        <img class="hero__picture-image" src="assets/images/hero-picture-small.png" alt="hero-picture" />
+                        <source srcset="assets/images/hero-picture-small.png" media="(min-width: 1024px)" />
+                        <img
+                            class="hero__picture-image"
+                            src="assets/images/hero-picture-tiny.png"
+                            alt="hero-picture"
+                            fetchpriority="high"
+                            height="600"
+                            width="600"
+                        />
                     </picture>
                     <button class="play-button hero__action" data-video-modal>
                         <span class="play-button__icon-box">
-                            <img class="play-button__icon" src="assets/icons/play-arrow.svg" alt="play-arrow" />
-                            <img class="play-button__author" src="assets/images/author.png" alt="author" />
+                            <img
+                                class="play-button__icon"
+                                src="assets/icons/play-arrow.svg"
+                                alt="play-arrow"
+                                height="24"
+                                width="24"
+                            />
+                            <img
+                                class="play-button__author"
+                                src="assets/images/author.png"
+                                alt="author"
+                                loading="lazy"
+                                height="40"
+                                width="40"
+                            />
                         </span>
                         <span class="play-button__message">
                             Watch Alan create his games easily
@@ -119,7 +148,14 @@
                         <h3 class="card__title text-h4">
                             Define <br> Your Game World
                         </h3>
-                        <img class="card__icon" src="assets/images/json-logo.svg" alt="JSON structure">
+                        <img
+                            class="card__icon"
+                            src="assets/images/json-logo.svg"
+                            alt="JSON structure"
+                            loading="lazy"
+                            height="110"
+                            width="100"
+                        >
                         <div class="card__body">
                             <p class="card__subtitle text-body-small">
                                 Data, states and rules — as a single model
@@ -135,7 +171,14 @@
                         <h3 class="card__title text-h4">
                             Plug Into <br> the Engine
                         </h3>
-                        <img class="card__icon" src="assets/images/data-exchange.svg" alt="JSON structure">
+                        <img
+                            class="card__icon"
+                            src="assets/images/data-exchange.svg"
+                            alt="JSON structure"
+                            loading="lazy"
+                            height="110"
+                            width="100"
+                        >
                         <div class="card__body">
                             <p class="card__subtitle text-body-small">
                                 No netcode. No backend. Just your game
@@ -150,7 +193,14 @@
                         <h3 class="card__title text-h4">
                             Run Worldwide <br> by Default
                         </h3>
-                        <img class="card__icon" src="assets/images/worldwide.svg" alt="JSON structure">
+                        <img
+                            class="card__icon"
+                            src="assets/images/worldwide.svg"
+                            alt="JSON structure"
+                            loading="lazy"
+                            height="110"
+                            width="100"
+                        >
                         <div class="card__body">
                             <p class="card__subtitle text-body-small">
                                 One world. Many servers. Zero ops.
@@ -181,9 +231,9 @@
                     <div class="possibilities__carousel-slider carousel__slider swiper">
                         <div class="swiper-wrapper">
                             <div class="possibilities__card swiper-slide">
-                                <h6 class="possibilities__card-title">
+                                <h3 class="possibilities__card-title">
                                     Stop Stitching Microservices
-                                </h6>
+                                </h3>
                                 <p class="possibilities__card-description">
                                     Replace fragmented tools with one cohesive engine. Data, logic, networking, and LiveOps work as one system, giving you total control without the integration headaches.
                                 </p>
@@ -193,19 +243,37 @@
                                     </span>
                                     <div class="possibilities__card-tree">
                                         <div class="possibilities__card-tree-item">
-                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="possibilities__card-icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <p class="possibilities__card-tree-item-name">
                                                 Networking & LiveOps built-in
                                             </p>
                                         </div>
                                         <div class="possibilities__card-tree-item">
-                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="possibilities__card-icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <p class="possibilities__card-tree-item-name">
                                                 Transparent pricing model
                                             </p>
                                         </div>
                                         <div class="possibilities__card-tree-item">
-                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="possibilities__card-icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <p class="possibilities__card-tree-item-name">
                                                 One dashboard for everything
                                             </p>
@@ -214,9 +282,9 @@
                                 </div>
                             </div>
                             <div class="possibilities__card swiper-slide">
-                                <h6 class="possibilities__card-title">
+                                <h3 class="possibilities__card-title">
                                     Multiplayer in Hours, Not Years
-                                </h6>
+                                </h3>
                                 <p class="possibilities__card-description">
                                     Skip the netcode nightmare. Our architecture handles synchronization, prediction, and state management automatically, so you can focus entirely on the gameplay loop.
                                 </p>
@@ -226,19 +294,37 @@
                                     </span>
                                     <div class="possibilities__card-tree">
                                         <div class="possibilities__card-tree-item">
-                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="possibilities__card-icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <p class="possibilities__card-tree-item-name">
                                                 No networking code needed
                                             </p>
                                         </div>
                                         <div class="possibilities__card-tree-item">
-                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="possibilities__card-icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <p class="possibilities__card-tree-item-name">
                                                 Instant prototyping
                                             </p>
                                         </div>
                                         <div class="possibilities__card-tree-item">
-                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="possibilities__card-icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <p class="possibilities__card-tree-item-name">
                                                 No steep learning curve
                                             </p>
@@ -247,9 +333,9 @@
                                 </div>
                             </div>
                             <div class="possibilities__card swiper-slide">
-                                <h6 class="possibilities__card-title">
+                                <h3 class="possibilities__card-title">
                                     Your Code Defines the Backend
-                                </h6>
+                                </h3>
                                 <p class="possibilities__card-description">
                                     Forget SQL queries and API endpoints. Simply define your game rules and data structures in code, and the platform automatically adapts to serve and sync them in real-time.
                                 </p>
@@ -259,19 +345,37 @@
                                     </span>
                                     <div class="possibilities__card-tree">
                                         <div class="possibilities__card-tree-item">
-                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="possibilities__card-icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <p class="possibilities__card-tree-item-name">
                                                 Real-time data sync
                                             </p>
                                         </div>
                                         <div class="possibilities__card-tree-item">
-                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="possibilities__card-icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <p class="possibilities__card-tree-item-name">
                                                 Logic defines the rules
                                             </p>
                                         </div>
                                         <div class="possibilities__card-tree-item">
-                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="possibilities__card-icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <p class="possibilities__card-tree-item-name">
                                                 Ready-to-use templates
                                             </p>
@@ -280,9 +384,9 @@
                                 </div>
                             </div>
                             <div class="possibilities__card swiper-slide">
-                                <h6 class="possibilities__card-title">
+                                <h3 class="possibilities__card-title">
                                     Infinite Scale. Zero DevOps.
-                                </h6>
+                                </h3>
                                 <p class="possibilities__card-description">
                                     Launch with confidence. Whether you have 10 players or 10 million, our global infrastructure scales automatically to meet demand. World state persists even through server failures.
                                 </p>
@@ -292,19 +396,37 @@
                                     </span>
                                     <div class="possibilities__card-tree">
                                         <div class="possibilities__card-tree-item">
-                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="possibilities__card-icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <p class="possibilities__card-tree-item-name">
                                                 Global scaling out-of-the-box
                                             </p>
                                         </div>
                                         <div class="possibilities__card-tree-item">
-                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="possibilities__card-icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <p class="possibilities__card-tree-item-name">
                                                 Fault-tolerant persistence
                                             </p>
                                         </div>
                                         <div class="possibilities__card-tree-item">
-                                            <img class="possibilities__card-icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="possibilities__card-icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <p class="possibilities__card-tree-item-name">
                                                 Zero DevOps overhead
                                             </p>
@@ -316,13 +438,25 @@
                     </div>
                     <div class="possibilities__carousel-controls">
                         <button class="possibilities__carousel-button carousel__button--prev">
-                            <img class="possibilities__carousel-button-icon" src="assets/icons/arrow.svg" alt="arrow">
+                            <img
+                                class="possibilities__carousel-button-icon"
+                                src="assets/icons/arrow.svg"
+                                alt="arrow"
+                                height="16"
+                                width="16"
+                            >
                         </button>
 
                         <div class="possibilities__carousel-pagination carousel__pagination"></div>
 
                         <button class="possibilities__carousel-button carousel__button--next">
-                            <img class="possibilities__carousel-button-icon" src="assets/icons/arrow.svg" alt="arrow">
+                            <img
+                                class="possibilities__carousel-button-icon"
+                                src="assets/icons/arrow.svg"
+                                alt="arrow"
+                                height="16"
+                                width="16"
+                            >
                         </button>
                     </div>
                 </div>
@@ -353,75 +487,150 @@
                     <div class="architectures__carousel-slider carousel__slider swiper">
                         <div class="swiper-wrapper">
                             <div class="architectures__card swiper-slide">
-                                <img class="architectures__card-picture" src="assets/images/game-1.webp" alt="game">
+                                <img
+                                    class="architectures__card-picture"
+                                    src="assets/images/game-1.webp"
+                                    alt="game"
+                                    loading="lazy"
+                                    height="100"
+                                    width="100"
+                                >
                                 <div class="architectures__card-body">
-                                    <h4 class="architectures__card-title text-h4">
+                                    <h3 class="architectures__card-title text-h4">
                                         Action RPG
-                                    </h4>
+                                    </h3>
                                     <p class="architectures__card-description">
                                         Similar to: Elden Ring, Diablo IV, Cyberpunk 2077, Genshin Impact
                                     </p>
                                     <ul class="check-list">
                                         <li class="check-list__item">
-                                            <img class="check-list__icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="check-list__icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <span class="check-list__info">Large-scale multiplayer worlds</span>
                                         </li>
                                         <li class="check-list__item">
-                                            <img class="check-list__icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="check-list__icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <span class="check-list__info">Quests, progression & persistence</span>
                                         </li>
                                         <li class="check-list__item">
-                                            <img class="check-list__icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="check-list__icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <span class="check-list__info">Seamless sharding & sync</span>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="architectures__card swiper-slide">
-                                <img class="architectures__card-picture" src="assets/images/game-2.webp" alt="game">
+                                <img
+                                    class="architectures__card-picture"
+                                    src="assets/images/game-2.webp"
+                                    alt="game"
+                                    loading="lazy"
+                                    height="100"
+                                    width="100"
+                                >
                                 <div class="architectures__card-body">
-                                    <h4 class="architectures__card-title text-h4">
+                                    <h3 class="architectures__card-title text-h4">
                                         Survival / Sandbox
-                                    </h4>
+                                    </h3>
                                     <p class="architectures__card-description">
                                         Similar to: Minecraft, Rust, ARK, Valheim
                                     </p>
                                     <ul class="check-list">
                                         <li class="check-list__item">
-                                            <img class="check-list__icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="check-list__icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <span class="check-list__info">Real-time co-op and crafting.</span>
                                         </li>
                                         <li class="check-list__item">
-                                            <img class="check-list__icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="check-list__icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <span class="check-list__info">Custom servers and modding support.</span>
                                         </li>
                                         <li class="check-list__item">
-                                            <img class="check-list__icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="check-list__icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <span class="check-list__info">Fast sync of large game worlds.</span>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="architectures__card swiper-slide">
-                                <img class="architectures__card-picture" src="assets/images/game-3.webp" alt="game">
+                                <img
+                                    class="architectures__card-picture"
+                                    src="assets/images/game-3.webp"
+                                    alt="game"
+                                    loading="lazy"
+                                    height="100"
+                                    width="100"
+                                >
                                 <div class="architectures__card-body">
-                                    <h4 class="architectures__card-title text-h4">
+                                    <h3 class="architectures__card-title text-h4">
                                         Indie & Casual
-                                    </h4>
+                                    </h3>
                                     <p class="architectures__card-description">
                                         Similar to: Stardew Valley, Among Us, Hades, Hollow Knight
                                     </p>
                                     <ul class="check-list">
                                         <li class="check-list__item">
-                                            <img class="check-list__icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="check-list__icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <span class="check-list__info">Simple integration for small teams.</span>
                                         </li>
                                         <li class="check-list__item">
-                                            <img class="check-list__icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="check-list__icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <span class="check-list__info">Fast MVP launches.</span>
                                         </li>
                                         <li class="check-list__item">
-                                            <img class="check-list__icon" src="assets/icons/success-check.svg" alt="success-check">
+                                            <img
+                                                class="check-list__icon"
+                                                src="assets/icons/success-check.svg"
+                                                alt="success-check"
+                                                height="28"
+                                                width="28"
+                                            >
                                             <span class="check-list__info">No backend skills needed</span>
                                         </li>
                                     </ul>
@@ -431,13 +640,25 @@
                     </div>
                     <div class="architectures__carousel-controls">
                         <button class="architectures__carousel-button carousel__button--prev">
-                            <img class="architectures__carousel-button-icon" src="assets/icons/arrow.svg" alt="arrow">
+                            <img
+                                class="architectures__carousel-button-icon"
+                                src="assets/icons/arrow.svg"
+                                alt="arrow"
+                                height="16"
+                                width="16"
+                            >
                         </button>
 
                         <div class="architectures__carousel-pagination carousel__pagination"></div>
 
                         <button class="architectures__carousel-button carousel__button--next">
-                            <img class="architectures__carousel-button-icon" src="assets/icons/arrow.svg" alt="arrow">
+                            <img
+                                class="architectures__carousel-button-icon"
+                                src="assets/icons/arrow.svg"
+                                alt="arrow"
+                                height="16"
+                                width="16"
+                            >
                         </button>
                     </div>
                 </div>
@@ -455,9 +676,9 @@
                 </div>
                 <div class="poll__cards">
                     <div class="poll__card">
-                        <h4 class="poll__card-title text-h4">
+                        <h3 class="poll__card-title text-h4">
                             Which template next?
-                        </h4>
+                        </h3>
                         <ul class="vote-list">
                             <li class="vote-list__item">
                                 <span class="vote-list__statistics">
@@ -534,9 +755,9 @@
                         </ul>
                     </div>
                     <div class="poll__card">
-                        <h4 class="poll__card-title text-h4">
+                        <h3 class="poll__card-title text-h4">
                             What tools do you need?
-                        </h4>
+                        </h3>
                         <ul class="vote-list">
                             <li class="vote-list__item">
                                 <span class="vote-list__statistics">
@@ -649,14 +870,14 @@
                     <div class="tabs__content tabs__content--active" data-tab-content="manual">
                         <div class="calculator">
                             <div class="calculator__actions">
-                                <h4 class="calculator__title text-h4">
+                                <h3 class="calculator__title text-h4">
                                     Enter your expected CCU
                                     <span class="calculator__tooltip tooltip tooltip--secondary">
                                         <span class="tooltip__content">
                                             <span class="tooltip__text">This is your tooltip text</span>
                                         </span>
                                     </span>
-                                </h4>
+                                </h3>
                                 <div class="calculator__range range range--grid" data-range>
                                     <div class="range__title">
                                         Expected Average CCU
@@ -666,20 +887,23 @@
                                             <span class="range__min text-subtitle">10 CCU</span>
                                             <span class="range__max text-subtitle">100K+</span>
                                         </div>
-                                        <input
+                                        <label class="range__label">
+                                            <input
                                                 type="range"
                                                 min="10"
                                                 max="100000"
                                                 value="250"
                                                 class="range__input"
-                                        />
+                                                aria-label="Average CCU"
+                                            />
+                                        </label>
                                     </div>
                                     <div class="range__value">250</div>
                                 </div>
                                 <div class="calculator__cards-wrapper">
-                                    <h6 class="calculator__subtitle text-body-large">
+                                    <h4 class="calculator__subtitle text-body-large">
                                         What affects your CCU?
-                                    </h6>
+                                    </h4>
                                     <div class="calculator__card-checkbox card-checkbox card-checkbox--two-cols" role="radiogroup">
                                         <label class="card-checkbox__option">
                                             <input
@@ -796,7 +1020,7 @@
                                 </div>
                             </div>
                             <div class="calculator__estimate">
-                                <h5 class="calculator__estimate-subtitle text-h5">Your Estimate</h5>
+                                <h4 class="calculator__estimate-subtitle text-h5">Your Estimate</h4>
                                 <span class="calculator__estimate-title">$5</span>
                                 <span class="calculator__estimate-span">Estimated monthly cost</span>
                                 <div class="calculator__estimate-info">
@@ -851,12 +1075,18 @@
                                     <div class="stepper__row">
                                         <div class="stepper__item stepper__item--active" data-step="1">
                                             <div class="stepper__item-circle">
-                                                <img class="stepper__item-icon" src="assets/icons/game.svg" alt="game">
+                                                <img
+                                                    class="stepper__item-icon"
+                                                    src="assets/icons/game.svg"
+                                                    alt="game"
+                                                    height="24"
+                                                    width="24"
+                                                >
                                             </div>
                                         </div>
                                         <div class="stepper__step stepper__step--active" data-step="1">
                                             <span class="stepper__step-number">Step 1</span>
-                                            <h5 class="stepper__step-name text-h5">Pick your game type</h5>
+                                            <h4 class="stepper__step-name text-h5">Pick your game type</h4>
                                             <div class="stepper__hidden-content">
                                                 <p class="stepper__step-description">
                                                     We’ll prefill typical session settings for this type. You can tweak them in the next steps.
@@ -870,7 +1100,13 @@
                                                             class="card-checkbox__input"
                                                         />
                                                         <span class="card-checkbox__card">
-                                                            <img class="card-checkbox__icon" src="assets/icons/game.svg" alt="game">
+                                                            <img
+                                                                class="card-checkbox__icon"
+                                                                src="assets/icons/game.svg"
+                                                                alt="game"
+                                                                height="20"
+                                                                width="20"
+                                                            >
                                                             <span class="card-checkbox__title">
                                                                 Casual Puzzle / Idle
                                                             </span>
@@ -887,7 +1123,13 @@
                                                             class="card-checkbox__input"
                                                         />
                                                         <span class="card-checkbox__card">
-                                                            <img class="card-checkbox__icon" src="assets/icons/bolt.svg" alt="bolt">
+                                                            <img
+                                                                class="card-checkbox__icon"
+                                                                src="assets/icons/bolt.svg"
+                                                                alt="bolt"
+                                                                height="20"
+                                                                width="20"
+                                                            >
                                                             <span class="card-checkbox__title">
                                                                 Co-op Survival / Builder
                                                             </span>
@@ -904,7 +1146,13 @@
                                                             class="card-checkbox__input"
                                                         />
                                                         <span class="card-checkbox__card">
-                                                            <img class="card-checkbox__icon" src="assets/icons/map-search.svg" alt="map-search">
+                                                            <img
+                                                                class="card-checkbox__icon"
+                                                                src="assets/icons/map-search.svg"
+                                                                alt="map-search"
+                                                                height="20"
+                                                                width="20"
+                                                            >
                                                             <span class="card-checkbox__title">
                                                                 Action / Dungeon Run
                                                             </span>
@@ -921,7 +1169,13 @@
                                                             class="card-checkbox__input"
                                                         />
                                                         <span class="card-checkbox__card">
-                                                            <img class="card-checkbox__icon" src="assets/icons/party.svg" alt="party">
+                                                            <img
+                                                                class="card-checkbox__icon"
+                                                                src="assets/icons/party.svg"
+                                                                alt="party"
+                                                                height="20"
+                                                                width="20"
+                                                            >
                                                             <span class="card-checkbox__title">
                                                                 Party / Minigames
                                                             </span>
@@ -937,12 +1191,18 @@
                                     <div class="stepper__row">
                                         <div class="stepper__item" data-step="2">
                                             <div class="stepper__item-circle">
-                                                <img class="stepper__item-icon" src="assets/icons/success-list.svg" alt="success-list">
+                                                <img
+                                                    class="stepper__item-icon"
+                                                    src="assets/icons/success-list.svg"
+                                                    alt="success-list"
+                                                    height="24"
+                                                    width="24"
+                                                >
                                             </div>
                                         </div>
                                         <div class="stepper__step" data-step="2">
                                             <span class="stepper__step-number">Step 2</span>
-                                            <h5 class="stepper__step-name text-h5">
+                                            <h4 class="stepper__step-name text-h5">
                                                 Set your MAU
                                                 <span class="tooltip tooltip--secondary">
                                                     <span class="tooltip__content">
@@ -950,7 +1210,7 @@
                                                         <span class="tooltip__text">is a metric used to measure the number of unique users who interact with a product or service over the course of a month.</span>
                                                     </span>
                                                 </span>
-                                            </h5>
+                                            </h4>
                                             <div class="stepper__hidden-content">
                                                 <div class="stepper__range stepper__range--mt-lg range" data-range>
                                                     <div class="range__body">
@@ -958,13 +1218,16 @@
                                                             <span class="range__min text-subtitle">100 MAU</span>
                                                             <span class="range__max text-subtitle">100K+ MAU</span>
                                                         </div>
-                                                        <input
-                                                            type="range"
-                                                            min="100"
-                                                            max="100000"
-                                                            value="35 000"
-                                                            class="range__input"
-                                                        />
+                                                        <label class="range__label">
+                                                            <input
+                                                                type="range"
+                                                                min="100"
+                                                                max="100000"
+                                                                value="35 000"
+                                                                class="range__input"
+                                                                aria-label="Monthly Active Users"
+                                                            />
+                                                        </label>
                                                     </div>
                                                     <div class="range__value">35 000</div>
                                                 </div>
@@ -974,12 +1237,18 @@
                                     <div class="stepper__row">
                                         <div class="stepper__item" data-step="3">
                                             <div class="stepper__item-circle">
-                                                <img class="stepper__item-icon" src="assets/icons/documents.svg" alt="documents">
+                                                <img
+                                                    class="stepper__item-icon"
+                                                    src="assets/icons/documents.svg"
+                                                    alt="documents"
+                                                    height="24"
+                                                    width="24"
+                                                >
                                             </div>
                                         </div>
                                         <div class="stepper__step" data-step="3">
                                             <span class="stepper__step-number">Step 3</span>
-                                            <h5 class="stepper__step-name text-h5">Adjust play session patterns</h5>
+                                            <h4 class="stepper__step-name text-h5">Adjust play session patterns</h4>
                                             <div class="stepper__hidden-content">
                                                 <p class="stepper__step-description">
                                                     Prefilled based on your game type. You can change them if needed.
@@ -993,13 +1262,16 @@
                                                             <span class="range__min text-subtitle">3 min</span>
                                                             <span class="range__max text-subtitle">90 min</span>
                                                         </div>
-                                                        <input
-                                                            type="range"
-                                                            min="3"
-                                                            max="90"
-                                                            value="15"
-                                                            class="range__input"
-                                                        />
+                                                        <label class="range__label">
+                                                            <input
+                                                                type="range"
+                                                                min="3"
+                                                                max="90"
+                                                                value="15"
+                                                                class="range__input"
+                                                                aria-label="Avg Session Length"
+                                                            />
+                                                        </label>
                                                     </div>
                                                     <div class="range__value">15</div>
                                                 </div>
@@ -1149,7 +1421,14 @@
                         <div class="swiper-wrapper">
                             <div class="testimonials__carousel-slide swiper-slide">
                                 <div class="testimonials__carousel-person-card person-card">
-                                    <img class="person-card__picture" src="assets/images/liam-jonson.png" alt="liam-jonson">
+                                    <img
+                                        class="person-card__picture"
+                                        src="assets/images/liam-jonson.png"
+                                        alt="liam-jonson"
+                                        loading="lazy"
+                                        height="100"
+                                        width="100"
+                                    >
                                     <div class="person-card__info">
                                         <div class="person-card__info-row">
                                             <div class="person-card__title">Liam Jonson</div>
@@ -1161,12 +1440,12 @@
                                     </div>
                                 </div>
                                 <div class="testimonials__carousel-slide-info">
-                                    <h4 class="testimonials__carousel-slide-title text-h4">
+                                    <h3 class="testimonials__carousel-slide-title text-h4">
                                         “We’ve been working with this team for over seven years, delivering several complex MMO projects together. During this time, they’ve consistently proven their ability to solve problems that even large studios struggle with. While we haven’t yet used their new platform directly, I’ve seen how their approaches to architecture and real-time world synchronization have evolved.”
-                                    </h4>
-                                    <h2 class="testimonials__carousel-slide-subtitle text-h2-static">
+                                    </h3>
+                                    <h4 class="testimonials__carousel-slide-subtitle text-h2-static">
                                         8x
-                                    </h2>
+                                    </h4>
                                     <p class="testimonials__carousel-slide-description">
                                         increase in data processing effciency
                                     </p>
@@ -1174,7 +1453,14 @@
                             </div>
                             <div class="testimonials__carousel-slide swiper-slide">
                                 <div class="testimonials__carousel-person-card person-card">
-                                    <img class="person-card__picture" src="assets/images/liam-jonson.png" alt="liam-jonson">
+                                    <img
+                                            class="person-card__picture"
+                                            src="assets/images/liam-jonson.png"
+                                            alt="liam-jonson"
+                                            loading="lazy"
+                                            height="100"
+                                            width="100"
+                                    >
                                     <div class="person-card__info">
                                         <div class="person-card__info-row">
                                             <div class="person-card__title">Liam Jonson</div>
@@ -1186,12 +1472,12 @@
                                     </div>
                                 </div>
                                 <div class="testimonials__carousel-slide-info">
-                                    <h4 class="testimonials__carousel-slide-title text-h4">
+                                    <h3 class="testimonials__carousel-slide-title text-h4">
                                         “We’ve been working with this team for over seven years, delivering several complex MMO projects together. During this time, they’ve consistently proven their ability to solve problems that even large studios struggle with. While we haven’t yet used their new platform directly, I’ve seen how their approaches to architecture and real-time world synchronization have evolved.”
-                                    </h4>
-                                    <h2 class="testimonials__carousel-slide-subtitle text-h2-static">
+                                    </h3>
+                                    <h4 class="testimonials__carousel-slide-subtitle text-h2-static">
                                         8x
-                                    </h2>
+                                    </h4>
                                     <p class="testimonials__carousel-slide-description">
                                         increase in data processing effciency
                                     </p>
@@ -1199,7 +1485,14 @@
                             </div>
                             <div class="testimonials__carousel-slide swiper-slide">
                                 <div class="testimonials__carousel-person-card person-card">
-                                    <img class="person-card__picture" src="assets/images/liam-jonson.png" alt="liam-jonson">
+                                    <img
+                                            class="person-card__picture"
+                                            src="assets/images/liam-jonson.png"
+                                            alt="liam-jonson"
+                                            loading="lazy"
+                                            height="100"
+                                            width="100"
+                                    >
                                     <div class="person-card__info">
                                         <div class="person-card__info-row">
                                             <div class="person-card__title">Liam Jonson</div>
@@ -1211,12 +1504,12 @@
                                     </div>
                                 </div>
                                 <div class="testimonials__carousel-slide-info">
-                                    <h4 class="testimonials__carousel-slide-title text-h4">
+                                    <h3 class="testimonials__carousel-slide-title text-h4">
                                         “We’ve been working with this team for over seven years, delivering several complex MMO projects together. During this time, they’ve consistently proven their ability to solve problems that even large studios struggle with. While we haven’t yet used their new platform directly, I’ve seen how their approaches to architecture and real-time world synchronization have evolved.”
-                                    </h4>
-                                    <h2 class="testimonials__carousel-slide-subtitle text-h2-static">
+                                    </h3>
+                                    <h4 class="testimonials__carousel-slide-subtitle text-h2-static">
                                         8x
-                                    </h2>
+                                    </h4>
                                     <p class="testimonials__carousel-slide-description">
                                         increase in data processing effciency
                                     </p>
@@ -1227,13 +1520,25 @@
 
                     <div class="testimonials__carousel-controls">
                         <button class="testimonials__carousel-button carousel__button--prev">
-                            <img class="testimonials__carousel-button-icon" src="assets/icons/arrow.svg" alt="arrow">
+                            <img
+                                class="testimonials__carousel-button-icon"
+                                src="assets/icons/arrow.svg"
+                                alt="arrow"
+                                height="16"
+                                width="16"
+                            >
                         </button>
 
                         <div class="testimonials__carousel-pagination carousel__pagination"></div>
 
                         <button class="testimonials__carousel-button carousel__button--next">
-                            <img class="testimonials__carousel-button-icon" src="assets/icons/arrow.svg" alt="arrow">
+                            <img
+                                class="testimonials__carousel-button-icon"
+                                src="assets/icons/arrow.svg"
+                                alt="arrow"
+                                height="16"
+                                width="16"
+                            >
                         </button>
                     </div>
                 </div>
@@ -1258,7 +1563,14 @@
                 <div class="tech__picture-box">
                     <picture class="tech__picture">
                         <source srcset="assets/images/tech-guide-book.webp" media="(min-width: 1600px)" />
-                        <img class="tech__picture-image" src="assets/images/tech-guide-book.webp" alt="tech-guide" />
+                        <img
+                            class="tech__picture-image"
+                            src="assets/images/tech-guide-book.webp"
+                            alt="tech-guide"
+                            loading="lazy"
+                            height="200"
+                            width="200"
+                        />
                     </picture>
                 </div>
             </div>
@@ -1286,7 +1598,13 @@
                 <div class="footer__top">
                     <div class="footer__brand">
                         <a href="/" class="logo logo--big footer__logo">
-                            <img class="logo__image" src="assets/icons/big-logo.svg" alt="PlayServ Big Logo">
+                            <img
+                                class="logo__image"
+                                src="assets/icons/big-logo.svg"
+                                alt="PlayServ Big Logo"
+                                height="40"
+                                width="240"
+                            >
                         </a>
                         <p class="footer__description">
                             We turn complex backend work into a plug-and-play experience — one platform for networking, live ops, and scaling. Teams ship games in days, not months, and focus on what they love most: building worlds, not managing servers.
@@ -1296,7 +1614,8 @@
                         <h3 class="footer__title">Newsletter</h3>
                         <p class="footer__description">Subscribe for exclusive updates, product news, and early access to Playserv features.</p>
                         <form class="form footer__subscribe" action="#" method="post" novalidate>
-                            <input
+                            <label class="form__label">
+                                <input
                                     type="email"
                                     id="newsletter-email"
                                     name="email"
@@ -1304,7 +1623,8 @@
                                     placeholder="Your email"
                                     autocomplete="email"
                                     required
-                            />
+                                />
+                            </label>
                             <button type="submit" class="btn btn--dark btn--small form__btn">
                                 <span class="btn__label">Subscribe</span>
                             </button>
@@ -1316,27 +1636,57 @@
                     <ul class="socials">
                         <li class="socials__item">
                             <a href="/" class="socials__link">
-                                <img class="socials__icon" src="assets/icons/youtube.svg" alt="youtube">
+                                <img
+                                    class="socials__icon"
+                                    src="assets/icons/youtube.svg"
+                                    alt="youtube"
+                                    height="24"
+                                    width="24"
+                                >
                             </a>
                         </li>
                         <li class="socials__item">
                             <a href="/" class="socials__link">
-                                <img class="socials__icon" src="assets/icons/facebook.svg" alt="facebook">
+                                <img
+                                    class="socials__icon"
+                                    src="assets/icons/facebook.svg"
+                                    alt="facebook"
+                                    height="24"
+                                    width="24"
+                                >
                             </a>
                         </li>
                         <li class="socials__item">
                             <a href="/" class="socials__link">
-                                <img class="socials__icon" src="assets/icons/linkedin.svg" alt="linkedin">
+                                <img
+                                    class="socials__icon"
+                                    src="assets/icons/linkedin.svg"
+                                    alt="linkedin"
+                                    height="24"
+                                    width="24"
+                                >
                             </a>
                         </li>
                         <li class="socials__item">
                             <a href="/" class="socials__link">
-                                <img class="socials__icon" src="assets/icons/instagram.svg" alt="instagram">
+                                <img
+                                    class="socials__icon"
+                                    src="assets/icons/instagram.svg"
+                                    alt="instagram"
+                                    height="24"
+                                    width="24"
+                                >
                             </a>
                         </li>
                         <li class="socials__item">
                             <a href="/" class="socials__link">
-                                <img class="socials__icon" src="assets/icons/tik-tok.svg" alt="tik-tok">
+                                <img
+                                    class="socials__icon"
+                                    src="assets/icons/tik-tok.svg"
+                                    alt="tik-tok"
+                                    height="24"
+                                    width="24"
+                                >
                             </a>
                         </li>
                     </ul>
@@ -1360,7 +1710,7 @@
             <div class="modal__video-wrapper">
                 <iframe
                     class="modal__iframe"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
                     title="YouTube video player"
                     frameborder="0"
                     allow="autoplay; encrypted-media"

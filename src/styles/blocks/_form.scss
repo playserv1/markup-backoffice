@@ -7,6 +7,10 @@
   position: relative;
 }
 
+.form__label {
+  width: 100%;
+}
+
 .form__input {
   background: get-color($surfaces, secondary-lighter);
   border: px-to-rem(1) solid get-color($strokes, secondary-lighter);
