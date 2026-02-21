@@ -39,9 +39,13 @@
     0 px-to-rem(46) px-to-rem(27) 0 rgba(0, 0, 0, 0.1),
     0 px-to-rem(81) px-to-rem(32) 0 rgba(0, 0, 0, 0.03),
     0 px-to-rem(127) px-to-rem(35) 0 rgba(0, 0, 0, 0);
-  min-width: px-to-rem(312);
+  min-width: px-to-rem(240);
   justify-content: center;
   margin: px-to-rem(4);
+
+  @include respond(xs) {
+    min-width: px-to-rem(312);
+  }
 
   &:hover {
     &:before,

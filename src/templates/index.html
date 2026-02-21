@@ -847,8 +847,14 @@
                     <p class="cost__banner-text">
                         PlayServ is free for now. The calculator estimates future usage and cost once pricing is enabled
                     </p>
+                    <div class="cost__banner-btn-wrapper">
+                        <a href="#" target="_blank" class="cost__banner-btn btn btn--primary btn--large">
+                            <span class="btn__label">Let’s calculate</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="cost__info">
+                <!--TODO TEMPORARY HIDDEN-->
+                <div class="cost__info" style="display: none">
                     <div class="cost__badge badge">
                         Cost Calculator
                     </div>
@@ -860,7 +866,7 @@
                         what that capacity will cost per month.
                     </p>
                 </div>
-                <div class="cost__tabs tabs" data-tabs>
+                <div class="cost__tabs tabs" data-tabs style="display: none">
                     <button class="tabs__btn tabs__btn--active" data-tab="manual">
                         <span class="tabs__btn-name">I know my CCU</span>
                     </button>
@@ -868,7 +874,7 @@
                         <span class="tabs__btn-name">Help me estimate</span>
                     </button>
                 </div>
-                <div class="cost__content">
+                <div class="cost__content" style="display: none">
                     <div class="tabs__content tabs__content--active" data-tab-content="manual">
                         <div class="calculator">
                             <div class="calculator__actions">

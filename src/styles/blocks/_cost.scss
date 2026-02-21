@@ -6,7 +6,7 @@
   padding: px-to-rem(80) 0;
 
   @include respond(lg) {
-    padding: px-to-rem(90) 0 px-to-rem(121);
+    padding: px-to-rem(90) 0;
   }
 }
 
@@ -27,20 +27,20 @@
 }
 
 .cost__banner {
+  align-items: center;
   background: url('/assets/images/cost-banner-background.webp') no-repeat center/cover;
   border-radius: radius(sm-l);
-  padding: px-to-rem(24) px-to-rem(40);
+  padding: px-to-rem(40) px-to-rem(24);
   display: flex;
   flex-direction: column;
   gap: px-to-rem(4);
   text-align: center;
   max-width: px-to-rem(560);
   width: 100%;
-  margin-bottom: px-to-rem(40);
 
   @include respond(lg) {
-    margin-bottom: 0;
     max-width: px-to-rem(944);
+    padding: px-to-rem(40);
   }
 }
 
@@ -62,8 +62,18 @@
   gap: px-to-rem(10);
   max-width: px-to-rem(944);
   text-align: center;
+  margin-top: px-to-rem(40);
+
+  @include respond(lg) {
+    margin-top: 0;
+  }
 }
 
 .cost__description {
   max-width: px-to-rem(752);
+}
+
+.cost__banner-btn-wrapper {
+  margin-top: px-to-rem(26);
+  z-index: 1;
 }
